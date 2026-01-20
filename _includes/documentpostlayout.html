@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Compass theme</title>
+    <script src="https://kit.fontawesome.com/b40ef46d77.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='{{ url }}/assets/css/document-post.css'></link>
+  </head>
+  <body>
+    {% include "header.html" %}
+    <h1>{{ title }}</h1>
+    <h2>{{ description }}</h2>
+    <p>{{ content }}</p>
+    {% include "footer.html" %}
+  </body>
+</html>

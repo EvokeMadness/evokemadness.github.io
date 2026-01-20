@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Compass theme</title>
+  </head>
+  <body style="background-image: url(/assets/meizhi-lang-FkeX3sPH22g-unsplash.jpg);">
+    {% include "header.html" %}
+
+    <div class="hero">
+      <img src="assets/43455846.jpg">
+      <div class="biography">
+        <p>I'm a maker and independent learner. I make content in several different mediums, because I am always excited to learn new skills and disciplines!</p>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <ol class="document-post">
+        <div class="description-left">
+          <h2 style="padding-inline: 1.5rem;">Documents</h2>
+          <p>Printable reference material for software.</p>
+        </div>
+        {%- for document-post in collections.document-post -%}
+          <li>
+            <a href="{{ document-post.url}}">
+              <img src="{{ document-post.data.preview-image }}">
+            </a>
+          </li>
+        {%- endfor -%}
+      </ol>
+
+      <div style="height: 2rem;"></div>
+
+      <ol class="model-post">
+        <div class="description-left">
+          <h2 style="padding-inline: 1.5rem;">CAD Projects</h2>
+          <p>3D model projects.</p>
+        </div>
+        {%- for model-post in collections.model-post -%}
+          <li>
+            <a href="{{ model-post.url}}">
+              <img src="{{ model-post.data.preview-image }}">
+            </a>
+          </li>
+        {%- endfor -%}
+      </ol>
+    </div>
+
+    <div style="height: 2rem;"></div>
+
+    {% include "footer.html" %}
+  </body>
+</html>
