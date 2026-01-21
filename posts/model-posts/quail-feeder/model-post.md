@@ -5,7 +5,7 @@ title: Customizable Quail Feeder
 description: A quail feeder designed to be customized by the number of units needed.
 date: 2024-10-01
 project-url: https://github.com/EvokeMadness/quail-feeder
-preview-image: https://github.com/EvokeMadness/quail-feeder/blob/main/assets/preview.png?raw=true
+preview-image: https://github.com/EvokeMadness/quail-feeder/blob/main/assets/preview-thingiverse.png?raw=true
 file-preview: posts/model-posts/quail-feeder/preview.x3d
 ---
 

@@ -2,9 +2,9 @@ h2 {
   display: flex;
   justify-content: center;
   margin-bottom: 0;
+  background-color: #1f1f1f99;
   font-size: 2rem;
   color: white;
-  background-color: #1f1f1f99;
 }
 
 .hero {
@@ -26,11 +26,11 @@ h2 {
 
   .biography {
     padding: 1rem;
+    border: 1px solid black;
     border-radius: 0.75rem;
+    background-color: #1f1f1f;
     font-size: 1.125rem;
     color: white;
-    background-color: #1f1f1f;
-    border: 1px solid black;
   }
 }
 
@@ -38,12 +38,12 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   max-width: 480px;
-  padding: 1rem;
+  padding: 1.5rem;
+  border: 1px solid black;
   border-radius: 0.75rem;
-  color: white;
   background-color: #1f1f1f;
+  color: white;
 }
 
 .document-post {
@@ -52,12 +52,28 @@ h2 {
   flex-wrap: nowrap;
   justify-content: left;
   gap: 2rem;
-  overflow-x: scroll;
   margin-block: 0;
   padding: 2rem;
-  list-style-type: none;
-  background-color: #1f1f1f99;
+  overflow-x: scroll;
   border-block: 1px solid black;
+  background-color: #1f1f1f99;
+  list-style: none;
+
+  h3 {
+    display: table;
+    justify-content: center;
+    margin: 0 auto;
+    padding-inline: 1rem;
+    padding-block: 0.125rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #1f1f1f;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
 
   img {
     max-height: 480px;
@@ -76,12 +92,28 @@ h2 {
   flex-wrap: nowrap;
   justify-content: left;
   gap: 2rem;
-  overflow-x: scroll;
   margin-block: 0;
   padding: 2rem;
-  list-style: none;
-  background-color: #1f1f1f99;
+  overflow-x: scroll;
   border-block: 1px solid black;
+  background-color: #1f1f1f99;
+  list-style: none;
+
+  h3 {
+    display: table;
+    justify-content: center;
+    margin: 0 auto;
+    padding-inline: 1rem;
+    padding-block: 0.125rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #1f1f1f;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
 
   img {
     max-height: 480px;
