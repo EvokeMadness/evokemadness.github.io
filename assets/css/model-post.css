@@ -5,8 +5,8 @@ body {
 
 header {
   padding: 0.1rem;
-  background-color: #1f1f1f;
   border-block: 1px solid black;
+  background-color: #1f1f1f;
 
   .page-header {
     display: flex;
