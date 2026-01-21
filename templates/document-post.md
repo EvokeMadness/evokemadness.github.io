@@ -1,6 +1,6 @@
 ---
 tags: template
-layout: documentpostlayout.html
+layout: layouts/document.html
 title: 
 description: 
 date: 2000-01-01

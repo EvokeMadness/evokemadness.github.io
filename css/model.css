@@ -1,0 +1,10 @@
+.main-content {
+  display: flex;
+  justify-content: right;
+}
+
+.file-preview {
+  border: 1px solid black;
+  border-radius: 0.75rem;
+  background-color: #3f3f3f;
+}

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Allie Gonzales | Portfolio</title>
+    <link rel='stylesheet' href='/css/index.css'></link>
   </head>
   <body style="background-image: url(/assets/meizhi-lang-FkeX3sPH22g-unsplash.jpg);">
-    {% include "header.html" %}
-      <p class="site-footer" style="display: flex; justify-content: center; margin: 0; color: white; background-color: darkred;">Under construction!</p>
+    {% include "layouts/header.html" %}
+      <p class="site-footer" style="display: flex; justify-content: center; margin: 0; color: white; background-color: darkred;">Under construction! 🚧</p>
 
     <div class="hero">
       <img src="assets/43455846.jpg">
@@ -17,16 +18,16 @@
     </div>
 
     <div class="main-content">
-      <ol class="document-post">
+      <ol class="document">
         <div class="description-left">
           <h2>Documents</h2>
           <p>Printable reference material for software.</p>
         </div>
-        {%- for document-post in collections.document-post reversed -%}
+        {%- for documents in collections.documents reversed -%}
           <li>
-            <a href="{{ document-post.url}}">
-              <img alt="{{ document-post.data.description }}" src="{{ document-post.data.preview-image }}">
-              <h3>{{ document-post.data.title }}</h3>
+            <a href="{{ documents.url}}">
+              <img alt="{{ documents.data.description }}" src="{{ documents.data.preview-image }}">
+              <h3>{{ documents.data.title }}</h3>
             </a>
           </li>
         {%- endfor -%}
@@ -34,16 +35,16 @@
 
       <div style="height: 2rem;"></div>
 
-      <ol class="model-post">
+      <ol class="model">
         <div class="description-left">
           <h2>CAD Projects</h2>
           <p>3D model projects.</p>
         </div>
-        {%- for model-post in collections.model-post reversed -%}
+        {%- for models in collections.models reversed -%}
           <li>
-            <a href="{{ model-post.url}}">
-              <img alt="{{ model-post.data.description }}" src="{{ model-post.data.preview-image }}">
-              <h3>{{ model-post.data.title }}</h3>
+            <a href="{{ models.url}}">
+              <img alt="{{ models.data.description }}" src="{{ models.data.preview-image }}">
+              <h3>{{ models.data.title }}</h3>
             </a>
           </li>
         {%- endfor -%}
@@ -52,6 +53,6 @@
 
     <div style="height: 2rem;"></div>
 
-    {% include "footer.html" %}
+    {% include "layouts/footer.html" %}
   </body>
 </html>

@@ -1,11 +1,11 @@
 ---
-tags: template
+tags: models
 layout: layouts/model.html
-title: 
-description: 
-date: 2000-01-01
-project-url: 
-preview-image: 
+title: Gear Charm
+description: Mini gear charm!
+date: 2026-01-03
+project-url: https://github.com/EvokeMadness/gear-box/tree/main/charm
+preview-image: https://github.com/EvokeMadness/gear-box/blob/main/charm/assets/preview-thingiverse.png?raw=true
 eleventyComputed:
   file-preview: "content/projects/models/{{ page.fileSlug }}/preview.x3d"
 ---

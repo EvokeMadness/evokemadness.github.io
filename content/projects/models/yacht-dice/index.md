@@ -1,11 +1,11 @@
 ---
-tags: template
+tags: models
 layout: layouts/model.html
-title: 
-description: 
-date: 2000-01-01
-project-url: 
-preview-image: 
+title: Yacht Dice
+description: Dice game rules and 3D printable accessory.
+date: 2023-09-03
+project-url: https://github.com/EvokeMadness/yacht-dice
+preview-image: https://github.com/EvokeMadness/yacht-dice/blob/main/assets/render.png?raw=true
 eleventyComputed:
   file-preview: "content/projects/models/{{ page.fileSlug }}/preview.x3d"
 ---

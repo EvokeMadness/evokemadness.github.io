@@ -1,11 +1,11 @@
 ---
-tags: template
+tags: models
 layout: layouts/model.html
-title: 
-description: 
-date: 2000-01-01
-project-url: 
-preview-image: 
+title: Customizable Quail Feeder
+description: A quail feeder designed to be customized by the number of units needed.
+date: 2024-10-01
+project-url: https://github.com/EvokeMadness/quail-feeder
+preview-image: https://github.com/EvokeMadness/quail-feeder/blob/main/assets/preview-thingiverse.png?raw=true
 eleventyComputed:
   file-preview: "content/projects/models/{{ page.fileSlug }}/preview.x3d"
 ---

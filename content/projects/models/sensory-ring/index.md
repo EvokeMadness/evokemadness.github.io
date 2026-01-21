@@ -1,11 +1,11 @@
 ---
-tags: template
+tags: models
 layout: layouts/model.html
-title: 
-description: 
-date: 2000-01-01
-project-url: 
-preview-image: 
+title: Sensory Ring
+description: Sensory ring with a satisfying divot!
+date: 2026-01-12
+project-url: https://github.com/EvokeMadness/fidget-spinner/tree/main/ring
+preview-image: https://github.com/EvokeMadness/fidget-spinner/blob/main/ring/assets/preview-thingiverse.png?raw=true
 eleventyComputed:
   file-preview: "content/projects/models/{{ page.fileSlug }}/preview.x3d"
 ---
