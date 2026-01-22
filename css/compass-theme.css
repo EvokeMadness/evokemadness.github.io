@@ -4,22 +4,20 @@ body {
 }
 
 header {
-  padding: 0.1rem;
   border-block: 1px solid black;
   background-color: #1f1f1f;
 
   .page-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    max-width: 1600px;
     margin: auto;
     color: white;
 
     h1 {
       margin: 0;
-      padding-inline: 2rem;
       font-size: 3.25rem;
     }
 
