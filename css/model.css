@@ -1,6 +1,12 @@
-.main-content {
+.overview {
   display: flex;
-  justify-content: right;
+  justify-content: space-around;
+
+  .box {
+    .README {
+      color: white;
+    }
+  }
 }
 
 .file-preview {

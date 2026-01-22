@@ -5,6 +5,7 @@ module.exports = {
 	description: "I'm a maker and independent learner. I make content in several different mediums, because I am always excited to learn new skills and disciplines!",
 	author: {
 		name: "Allie Gonzales",
+		username: "EvokeMadness",
 		email: "antgonzales9643@gmail.com",
 
 		links: [
