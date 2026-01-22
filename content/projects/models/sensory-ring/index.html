@@ -6,6 +6,7 @@
 		<title>Allie Gonzales | Models</title>
     <link rel="icon" type="image/svg" href="/favicon.svg">
     <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script>
+    <script src="https://unpkg.com/commonmark@0.29.3/dist/commonmark.js"></script>
     <link rel='stylesheet' href='/css/x3dom.css'></link>
     <link rel='stylesheet' href='/css/model.css'></link>
   </head>
@@ -44,9 +45,53 @@
   <p class="site-footer" style="display: flex; justify-content: center; margin: 0; color: white; background-color: darkred;">Under construction! 🚧</p>
 </header>
 
-    <h1>Sensory Ring</h1>
-    <div class="main-content">
-      <p>Sensory ring with a satisfying divot!</p>
+    <div class="overview">
+      <div class="box">
+        <div class="README"></div>
+        <script>
+          (async function() {
+            var projectUrl = "https://github.com/EvokeMadness/fidget-spinner/tree/main/ring";
+            if (projectUrl.endsWith('/')) {
+              projectUrl = projectUrl.slice(0, -1);
+            }
+            var readme = document.querySelector('.README');
+            try {
+              var baseUrl = projectUrl.replace("github.com", "raw.githubusercontent.com").replace("/tree", "/");
+              var url = baseUrl + "/main/README.md";
+              var response = await fetch(url);
+              if (!response.ok) {
+                url = baseUrl + "/README.md";
+                response = await fetch(url);
+              }
+              if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+              }
+
+              const text = await response.text();
+              var reader = new commonmark.Parser();
+              var writer = new commonmark.HtmlRenderer();
+              var parsed = reader.parse(text);
+              var walker = parsed.walker();
+              var event, node;
+              while ((event = walker.next())) {
+                node = event.node;
+                if (event.entering && node.type === 'image') {
+                  if (node.destination.startsWith("https://github.com") && node.destination.includes("/blob/")) {
+                    node.destination = node.destination.replace("/blob/", "/raw/");
+                  } else if (!node.destination.startsWith("http")) {
+                    node.destination = new URL(node.destination, url).href;
+                  }
+                }
+              }
+              var result = writer.render(parsed);
+              readme.innerHTML = result;
+            } catch (error) {
+              console.error(error.message);
+              readme.innerHTML = "<b>404.</b> Content not found. Visit the repository on GitHub here: <a href='https://github.com/EvokeMadness/fidget-spinner/tree/main/ring'>Repository Link</a>";
+            }
+          })();
+        </script>
+      </div>
       <div class="file-preview">
         <x3d width='480px' height='480px'> 
           <scene> 
