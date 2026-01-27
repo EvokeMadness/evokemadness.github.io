@@ -5,7 +5,8 @@ title: Tamagotchi Connection Battery Door
 description: 3D printable replacement battery door for the Tamagotchi connection.
 date: 2025-11-12
 project-url: https://github.com/EvokeMadness/tamagotchi-battery-door
-preview-image: content/projects/models/tamagotchi-battery-door/preview-thingiverse-interior-legacy.png
+cover: content/projects/models/tamagotchi-battery-door/preview-thingiverse-interior-legacy.png
+display-readme-previews: true
 eleventyComputed:
   file-preview: "content/projects/models/{{ page.fileSlug }}/preview.x3d"
 ---

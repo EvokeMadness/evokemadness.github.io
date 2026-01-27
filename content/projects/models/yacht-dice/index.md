@@ -5,7 +5,8 @@ title: Yacht Dice
 description: Dice game rules and 3D printable accessory.
 date: 2023-09-03
 project-url: https://github.com/EvokeMadness/yacht-dice
-preview-image: https://github.com/EvokeMadness/yacht-dice/blob/main/assets/render.png?raw=true
+cover: https://github.com/EvokeMadness/yacht-dice/blob/main/assets/render.png?raw=true
+display-readme-previews: true
 eleventyComputed:
   file-preview: "content/projects/models/{{ page.fileSlug }}/preview.x3d"
 ---

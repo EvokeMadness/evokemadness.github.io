@@ -2,15 +2,19 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Allie Gonzales | Documents</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allie Gonzales | Documents</title>
     <link rel="icon" type="image/svg" href="/favicon.svg">
     <script src="https://kit.fontawesome.com/b40ef46d77.js" crossorigin="anonymous"></script>
-    <link rel='stylesheet' href='/css/document.css'></link>
+    <script src="https://unpkg.com/commonmark@0.29.3/dist/commonmark.js"></script>
+    <link rel='stylesheet' href='/css/document.css'>
+    </link>
   </head>
+
   <body>
     <script src="https://kit.fontawesome.com/b40ef46d77.js" crossorigin="anonymous"></script>
-<link rel='stylesheet' href='/css/compass-theme.css'></link>
+<link rel='stylesheet' href='/css/compass-theme.css'>
+</link>
 <header>
   <div class="page-header">
     <a href="/">
@@ -18,38 +22,115 @@
     </a>
     <div>
       
-        <a href="https://github.com/EvokeMadness">
-          <i class="fa-brands fa-github"></i>
-        </a>
+      <a href="https://github.com/EvokeMadness">
+        <i class="fa-brands fa-github"></i>
+      </a>
       
-        <a href="https://www.linkedin.com/in/evokemadness/">
-          <i class="fa-brands fa-linkedin-in"></i>
-        </a>
+      <a href="https://www.linkedin.com/in/evokemadness/">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
       
-        <a href="https://linktr.ee/EvokeMadness">
-          <i class="fa-brands fa-linktree"></i>
-        </a>
+      <a href="https://linktr.ee/EvokeMadness">
+        <i class="fa-brands fa-linktree"></i>
+      </a>
       
-        <a href="https://unsplash.com/@evokemadness">
-          <i class="fa-brands fa-unsplash"></i>
-        </a>
+      <a href="https://unsplash.com/@evokemadness">
+        <i class="fa-brands fa-unsplash"></i>
+      </a>
       
-        <a href="https://evokemadness.itch.io/">
-          <i class="fa-brands fa-itch-io"></i>
-        </a>
+      <a href="https://evokemadness.itch.io/">
+        <i class="fa-brands fa-itch-io"></i>
+      </a>
       
     </div>
   </div>
-  <p class="site-footer" style="display: flex; justify-content: center; margin: 0; color: white; background-color: darkred;">Under construction! 🚧</p>
+  <p style="display: none; justify-content: center; margin: 0; color: white; background-color: darkred;">Under
+    construction! 🚧</p>
 </header>
+    <div class="overview">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quis placeat sequi et, saepe voluptatem pariatur vitae accusamus ullam est? Cupiditate beatae quae molestias optio ex adipisci repudiandae laudantium velit.</p>
 
-    <h1>FreeCAD Sketcher Cheat Sheet</h1>
-    <h2>FreeCAD hot keys cheat sheet</h2>
-    <p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quis placeat sequi et, saepe voluptatem pariatur vitae accusamus ullam est? Cupiditate beatae quae molestias optio ex adipisci repudiandae laudantium velit.</p>
-</p>
+      <div class="README"></div>
+<script>
+    (async function () {
+        var projectUrl = "https://github.com/EvokeMadness/FreeCAD-sketcher-cheat-sheet";
+        var readmeElement = document.querySelector('.README');
+
+        var rawUrl = projectUrl.replace("github.com", "raw.githubusercontent.com");
+        var readmeUrl = rawUrl.replace("/refs/heads", "/") + "/main/README.md";
+
+        var response = await fetch(readmeUrl);
+        if (!response.ok) {
+            var readmeUrl = rawUrl.replace("/tree", "/") + "/README.md";
+            response = await fetch(readmeUrl);
+        }
+
+        var readme = await response.text(readmeUrl);
+
+        var reader = new commonmark.Parser();
+        var writer = new commonmark.HtmlRenderer();
+        var parsed = reader.parse(readme);
+
+        var walker = parsed.walker();
+        var event, node;
+        var displayPreviews = "false";
+
+        while ((event = walker.next())) {
+            node = event.node;
+            if (event.entering && node.type === 'image' && displayPreviews === "true") {
+                if (node.destination.includes("/blob/")) {
+                    node.destination = node.destination + "?raw=true"
+                } else if (!node.destination.startsWith("http")) {
+                    node.destination = new URL(node.destination, readmeUrl).href;
+                }
+            }
+        }
+        var result = writer.render(parsed);
+        readmeElement.innerHTML = result;
+    })();
+</script>
+      <div class="file-preview">
+        <canvas id="the-canvas" style="border: 1px solid black; direction: ltr"></canvas>
+
+<script type="module">
+    import * as pdfjsLib from 'https://unpkg.com/pdfjs-dist@5.4.530/build/pdf.min.mjs';
+
+    const url = "https://raw.githubusercontent.com/EvokeMadness/FreeCAD-sketcher-cheat-sheet/main/freeCAD-sketcher-constraints.pdf";
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://unpkg.com/pdfjs-dist@5.4.530/build/pdf.worker.min.mjs";
+
+    (async function () {
+        const loadingTask = pdfjsLib.getDocument(url);
+        const pdf = await loadingTask.promise;
+
+        const page = await pdf.getPage(1);
+        const scale = 1.5;
+        const viewport = page.getViewport({ scale });
+
+        const outputScale = window.devicePixelRatio || 1;
+
+        const canvas = document.getElementById("the-canvas");
+        const context = canvas.getContext("2d");
+
+        canvas.width = Math.floor(viewport.width * outputScale);
+        canvas.height = Math.floor(viewport.height * outputScale);
+        canvas.style.width = Math.floor(viewport.width) + "px";
+        canvas.style.height = Math.floor(viewport.height) + "px";
+
+        const transform = outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null;
+
+        const renderContext = {
+            canvasContext: context,
+            transform,
+            viewport,
+        };
+        page.render(renderContext);
+    })();
+</script>
+      </div>
+    </div>
     <footer class="site-footer">
      <p>© 2026 EvokeMadness</p>
 </footer>
-
   </body>
 </html>

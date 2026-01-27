@@ -5,7 +5,8 @@ title: Gear Charm
 description: Mini gear charm!
 date: 2026-01-03
 project-url: https://github.com/EvokeMadness/gear-box/tree/main/charm
-preview-image: https://github.com/EvokeMadness/gear-box/blob/main/charm/assets/preview-thingiverse.png?raw=true
+cover: https://github.com/EvokeMadness/gear-box/blob/main/charm/assets/preview-thingiverse.png?raw=true
+display-readme-previews: true
 eleventyComputed:
   file-preview: "content/projects/models/{{ page.fileSlug }}/preview.x3d"
 ---

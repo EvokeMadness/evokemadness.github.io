@@ -5,7 +5,8 @@ title: Spelunky 2 LISE Keychain
 description: Mini LISE from Spelunky 2!
 date: 2026-01-11
 project-url: https://github.com/EvokeMadness/LISE/tree/main/mini-LISE
-preview-image: https://github.com/EvokeMadness/LISE/blob/main/mini-LISE/assets/preview.png?raw=true
+cover: https://github.com/EvokeMadness/LISE/blob/main/mini-LISE/assets/preview.png?raw=true
+display-readme-previews: true
 eleventyComputed:
   file-preview: "content/projects/models/{{ page.fileSlug }}/preview.x3d"
 ---

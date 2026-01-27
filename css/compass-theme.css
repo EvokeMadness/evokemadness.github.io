@@ -1,10 +1,11 @@
 body {
   margin: 0;
-  background-color: #1f1f1f;
+  background-color: color-mix(in srgb, white 10%, #1f1f1f 90%);
 }
 
 header {
-  border-block: 1px solid black;
+  padding: 1rem;
+  border-bottom: 3px solid darkred;
   background-color: #1f1f1f;
 
   .page-header {
@@ -22,6 +23,7 @@ header {
     }
 
     a {
+      margin: 0.5rem;
       color: white;
       text-decoration: none;
     }
@@ -32,8 +34,8 @@ footer {
   display: flex;
   justify-content: center;
   margin: auto;
-  padding: 0.1rem;
-  border-block: 1px solid black;
+  padding: 0.5rem;
+  border-top: 2px solid darkred;
   background-color: #1f1f1f;
   color: white;
 }

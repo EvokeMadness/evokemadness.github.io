@@ -5,7 +5,8 @@ title: 3D Printable Watch Band
 description: Watch strap/band that is printed with TPU.
 date: 2024-06-12
 project-url: https://github.com/EvokeMadness/watch-band
-preview-image: https://github.com/EvokeMadness/watch-band/blob/main/assets/preview.png?raw=true
+cover: https://github.com/EvokeMadness/watch-band/blob/main/assets/preview.png?raw=true
+display-readme-previews: true
 eleventyComputed:
   file-preview: "content/projects/models/{{ page.fileSlug }}/preview.x3d"
 ---
