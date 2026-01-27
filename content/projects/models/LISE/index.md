@@ -5,7 +5,8 @@ title: LISE
 description: 3D printable game character from Spelunky 2
 date: 2022-03-06
 project-url: https://github.com/EvokeMadness/LISE
-preview-image: https://github.com/EvokeMadness/LISE/blob/main/assets/preview.png?raw=true
+cover: https://github.com/EvokeMadness/LISE/blob/main/assets/preview.png?raw=true
+display-readme-previews: true
 eleventyComputed:
   file-preview: "content/projects/models/{{ page.fileSlug }}/preview.x3d"
 ---

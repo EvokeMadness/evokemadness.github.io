@@ -1,16 +1,45 @@
-.overview {
-  display: flex;
-  justify-content: space-around;
-
-  .box {
-    .README {
-      color: white;
-    }
-  }
+img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 0.25rem;
 }
 
-.file-preview {
-  border: 1px solid black;
-  border-radius: 0.75rem;
-  background-color: #3f3f3f;
+.overview {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  color: white;
+
+  .clearfix-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    flex: 1;
+
+    .README {
+      margin-top: 2rem;
+      padding-inline: 2rem;
+      border: 1px solid black;
+      border-radius: 0.75rem;
+      background-color: #1f1f1f99;
+    }
+
+    .content {
+      padding: 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid black;
+      background-color: color-mix(in srgb, white 30%, #1f1f1f 70%);
+      font-size: 1.125rem;
+    }
+  }
+
+  .file-preview {
+    max-height: 480px;
+    margin: 2rem;
+    border: 1px solid black;
+    border-radius: 0.75rem;
+    background-color: #1f1f1f;
+  }
 }

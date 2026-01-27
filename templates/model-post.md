@@ -5,7 +5,8 @@ title:
 description: 
 date: 2000-01-01
 project-url: 
-preview-image: 
+cover: 
+display-readme-previews: false
 eleventyComputed:
   file-preview: "content/projects/models/{{ page.fileSlug }}/preview.x3d"
 ---

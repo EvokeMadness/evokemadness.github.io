@@ -2,17 +2,24 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ metadata.author.name }} | Documents</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ metadata.author.name }} | Documents</title>
     <link rel="icon" type="image/svg" href="/favicon.svg">
     <script src="https://kit.fontawesome.com/b40ef46d77.js" crossorigin="anonymous"></script>
-    <link rel='stylesheet' href='{{ url }}/css/document.css'></link>
+    <script src="https://unpkg.com/commonmark@0.29.3/dist/commonmark.js"></script>
+    <link rel='stylesheet' href='{{ url }}/css/document.css'>
+    </link>
   </head>
+
   <body>
     {% include "layouts/header.html" %}
-    <h1>{{ title }}</h1>
-    <h2>{{ description }}</h2>
-    <p>{{ content }}</p>
+    <div class="overview">
+      {{ content }}
+      {% include "layouts/commonmark.html" %}
+      <div class="file-preview">
+        {% include "layouts/pdf.js.html" %}
+      </div>
+    </div>
     {% include "layouts/footer.html" %}
   </body>
 </html>

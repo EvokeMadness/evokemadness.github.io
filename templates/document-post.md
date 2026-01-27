@@ -5,7 +5,8 @@ title:
 description: 
 date: 2000-01-01
 project-url: 
-preview-image: 
+cover: 
+display-readme-previews: false
 file-preview: 
 ---
 
