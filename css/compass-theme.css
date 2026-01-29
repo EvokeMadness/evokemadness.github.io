@@ -41,5 +41,6 @@ footer {
 }
 
 .fa-brands {
+  margin-block: 1.5rem;
   font-size: 2.25rem;
 }
