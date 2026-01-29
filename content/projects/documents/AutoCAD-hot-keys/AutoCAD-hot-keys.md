@@ -5,7 +5,7 @@ title: AutoCAD Hot Keys
 description: AutoCAD hot keys cheat sheet
 date: 2022-05-08
 project-url: https://github.com/EvokeMadness/AutoCAD-hot-keys
-cover: https://github.com/EvokeMadness/AutoCAD-hot-keys/blob/main/assets/preview.png?raw=true
+cover: content/projects/documents/AutoCAD-hot-keys/preview.png
 file-preview: https://raw.githubusercontent.com/EvokeMadness/AutoCAD-hot-keys/main/autoCAD-hot-keys.pdf
 display-readme-previews: true
 ---

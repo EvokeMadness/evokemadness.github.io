@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ metadata.title }} | Portfolio</title>
+    <title>{{ metadata.title }}</title>
     <meta name="description" content="{{ metadata.description }}" />
     <link rel="icon" type="image/svg" href="/favicon.svg" />
     <link rel="stylesheet" href="/css/index.css" />
@@ -31,7 +31,7 @@
           <h2>Documents</h2>
           <p>Printable reference material for software.</p>
         </div>
-        {%- for documents in collections.documents reversed -%}
+        {%- for documents in collections.documents -%}
         <li>
           <a href="{{ documents.url}}">
             <img
@@ -51,7 +51,7 @@
           <h2>CAD Projects</h2>
           <p>3D model projects.</p>
         </div>
-        {%- for models in collections.models reversed -%}
+        {%- for models in collections.models -%}
         <li>
           <a href="{{ models.url}}">
             <img
