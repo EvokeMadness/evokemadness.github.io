@@ -1,23 +1,27 @@
 <!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ metadata.title }} | Portfolio</title>
-    <meta name="description" content="{{ metadata.description }}">
-    <link rel="icon" type="image/svg" href="/favicon.svg">
-    <link rel='stylesheet' href='/css/index.css'>
-    </link>
+    <meta name="description" content="{{ metadata.description }}" />
+    <link rel="icon" type="image/svg" href="/favicon.svg" />
+    <link rel="stylesheet" href="/css/index.css" />
   </head>
 
-  <body style="background-image: url(/assets/meizhi-lang-FkeX3sPH22g-unsplash.jpg);">
+  <body
+    style="background-image: url(/assets/meizhi-lang-FkeX3sPH22g-unsplash.jpg)"
+  >
     {% include "layouts/header.html" %}
 
     <div class="hero">
-      <img src="assets/43455846.jpg">
+      <img src="assets/43455846.jpg" />
       <div class="biography">
-        <p>I'm a maker and independent learner. I make content in several different mediums, because I am always excited
-          to learn new skills and disciplines!</p>
+        <p>
+          I'm a maker and independent learner. I make content in several
+          different mediums, because I am always excited to learn new skills and
+          disciplines!
+        </p>
       </div>
     </div>
 
@@ -30,14 +34,17 @@
         {%- for documents in collections.documents reversed -%}
         <li>
           <a href="{{ documents.url}}">
-            <img alt="{{ documents.data.description }}" src="{{ documents.data.cover }}">
+            <img
+              alt="{{ documents.data.description }}"
+              src="{{ documents.data.cover }}"
+            />
             <h3>{{ documents.data.title }}</h3>
           </a>
         </li>
         {%- endfor -%}
       </ol>
 
-      <div style="height: 2rem;"></div>
+      <div style="height: 2rem"></div>
 
       <ol class="model">
         <div class="description-left">
@@ -47,7 +54,10 @@
         {%- for models in collections.models reversed -%}
         <li>
           <a href="{{ models.url}}">
-            <img alt="{{ models.data.description }}" src="{{ models.data.cover }}">
+            <img
+              alt="{{ models.data.description }}"
+              src="{{ models.data.cover }}"
+            />
             <h3>{{ models.data.title }}</h3>
           </a>
         </li>
@@ -55,7 +65,7 @@
       </ol>
     </div>
 
-    <div style="height: 2rem;"></div>
+    <div style="height: 2rem"></div>
 
     {% include "layouts/footer.html" %}
   </body>

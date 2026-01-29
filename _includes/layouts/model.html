@@ -1,30 +1,28 @@
 <!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ metadata.author.name }} | Models</title>
-    <link rel="icon" type="image/svg" href="/favicon.svg">
-    <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script>
+    <link rel="icon" type="image/svg" href="/favicon.svg" />
+    <script
+      type="text/javascript"
+      src="https://www.x3dom.org/download/x3dom.js"
+    ></script>
     <script src="https://unpkg.com/commonmark@0.29.3/dist/commonmark.js"></script>
-    <link rel='stylesheet' href='{{ url }}/css/x3dom.css'>
-    </link>
-    <link rel='stylesheet' href='{{ url }}/css/model.css'>
-    </link>
+    <link rel="stylesheet" href="{{ url }}/css/x3dom.css" />
+    <link rel="stylesheet" href="{{ url }}/css/overview.css" />
   </head>
 
   <body>
     {% include "layouts/header.html" %}
     <div class="overview">
       <div class="clearfix-container">
-        <div class="content">
-          {{ content }}
-        </div>
-        <div class="README">
-          {% include "layouts/commonmark.html" %}
-        </div>
+        <div class="content" style="display: none">{{ content }}</div>
+        <div class="README">{% include "layouts/commonmark.html" %}</div>
       </div>
       <div class="file-preview">
+        <h2>Model Preview</h2>
         {% include "layouts/x3d.html" %}
       </div>
     </div>

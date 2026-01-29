@@ -1,39 +1,43 @@
 <div class="README"></div>
 <script>
-    (async function () {
-        var projectUrl = "{{ project-url }}";
-        var readmeElement = document.querySelector('.README');
+  (async function () {
+    var projectUrl = "{{ project-url }}";
+    var readmeElement = document.querySelector(".README");
 
-        var rawUrl = projectUrl.replace("github.com", "raw.githubusercontent.com");
-        var readmeUrl = rawUrl.replace("/refs/heads", "/") + "/main/README.md";
+    var rawUrl = projectUrl.replace("github.com", "raw.githubusercontent.com");
+    var readmeUrl = rawUrl.replace("/refs/heads", "/") + "/main/README.md";
 
-        var response = await fetch(readmeUrl);
-        if (!response.ok) {
-            var readmeUrl = rawUrl.replace("/tree", "/") + "/README.md";
-            response = await fetch(readmeUrl);
+    var response = await fetch(readmeUrl);
+    if (!response.ok) {
+      var readmeUrl = rawUrl.replace("/tree", "/") + "/README.md";
+      response = await fetch(readmeUrl);
+    }
+
+    var readme = await response.text(readmeUrl);
+
+    var reader = new commonmark.Parser();
+    var writer = new commonmark.HtmlRenderer();
+    var parsed = reader.parse(readme);
+
+    var walker = parsed.walker();
+    var event, node;
+    var displayPreviews = "{{ display-readme-previews }}";
+
+    while ((event = walker.next())) {
+      node = event.node;
+      if (
+        event.entering &&
+        node.type === "image" &&
+        displayPreviews === "true"
+      ) {
+        if (node.destination.includes("/blob/")) {
+          node.destination = node.destination + "?raw=true";
+        } else if (!node.destination.startsWith("http")) {
+          node.destination = new URL(node.destination, readmeUrl).href;
         }
-
-        var readme = await response.text(readmeUrl);
-
-        var reader = new commonmark.Parser();
-        var writer = new commonmark.HtmlRenderer();
-        var parsed = reader.parse(readme);
-
-        var walker = parsed.walker();
-        var event, node;
-        var displayPreviews = "{{ display-readme-previews }}";
-
-        while ((event = walker.next())) {
-            node = event.node;
-            if (event.entering && node.type === 'image' && displayPreviews === "true") {
-                if (node.destination.includes("/blob/")) {
-                    node.destination = node.destination + "?raw=true"
-                } else if (!node.destination.startsWith("http")) {
-                    node.destination = new URL(node.destination, readmeUrl).href;
-                }
-            }
-        }
-        var result = writer.render(parsed);
-        readmeElement.innerHTML = result;
-    })();
+      }
+    }
+    var result = writer.render(parsed);
+    readmeElement.innerHTML = result;
+  })();
 </script>

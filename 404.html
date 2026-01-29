@@ -2,21 +2,22 @@
 permalink: 404.html
 eleventyExcludeFromCollections: true
 ---
+
 <!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ metadata.author.name }} | 404</title>
-    <link rel="icon" type="image/svg" href="/favicon.svg">
+    <link rel="icon" type="image/svg" href="/favicon.svg" />
   </head>
 
   <body>
     {% include "layouts/header.html" %}
-    <h1 style="text-align: center; margin: 0; padding-block: 400px; color: black;">
-      <b>404.</b> Content not found.
-
-      Go <a href="/">home</a>.
+    <h1
+      style="text-align: center; margin: 0; padding-block: 400px; color: black"
+    >
+      <b>404.</b> Content not found. Go <a href="/">home</a>.
     </h1>
     {% include "layouts/footer.html" %}
   </body>
