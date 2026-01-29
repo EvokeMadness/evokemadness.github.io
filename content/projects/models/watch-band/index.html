@@ -1,26 +1,32 @@
 <!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Allie Gonzales | Models</title>
-    <link rel="icon" type="image/svg" href="/favicon.svg">
-    <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script>
+    <link rel="icon" type="image/svg" href="/favicon.svg" />
+    <script
+      type="text/javascript"
+      src="https://www.x3dom.org/download/x3dom.js"
+    ></script>
     <script src="https://unpkg.com/commonmark@0.29.3/dist/commonmark.js"></script>
-    <link rel='stylesheet' href='/css/x3dom.css'>
-    </link>
-    <link rel='stylesheet' href='/css/model.css'>
-    </link>
+    <link rel="stylesheet" href="/css/x3dom.css" />
+    <link rel="stylesheet" href="/css/overview.css" />
   </head>
 
   <body>
-    <script src="https://kit.fontawesome.com/b40ef46d77.js" crossorigin="anonymous"></script>
-<link rel='stylesheet' href='/css/compass-theme.css'>
-</link>
+    <script
+  src="https://kit.fontawesome.com/b40ef46d77.js"
+  crossorigin="anonymous"
+></script>
+<link rel="stylesheet" href="/css/compass-theme.css" />
+<link rel="stylesheet" href="/css/index.css" />
 <header>
   <div class="page-header">
     <a href="/">
-      <h1>Allie Gonzales</h1>
+      <h1 style="font-size: 2.75rem; margin: 1rem">
+        Allie Gonzales
+      </h1>
     </a>
     <div>
       
@@ -46,68 +52,86 @@
       
     </div>
   </div>
-  <p style="display: none; justify-content: center; margin: 0; color: white; background-color: darkred;">Under
-    construction! 🚧</p>
+  <p
+    style="
+      display: none;
+      justify-content: center;
+      margin: 0;
+      color: white;
+      background-color: darkred;
+    "
+  >
+    Under construction! 🚧
+  </p>
 </header>
+
     <div class="overview">
       <div class="clearfix-container">
-        <div class="content">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quis placeat sequi et, saepe voluptatem pariatur vitae accusamus ullam est? Cupiditate beatae quae molestias optio ex adipisci repudiandae laudantium velit.</p>
-
-        </div>
-        <div class="README">
-          <div class="README"></div>
+        <div class="content" style="display: none"><h1>Heading 1</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quis placeat sequi et, saepe voluptatem pariatur vitae accusamus ullam est? Cupiditate beatae quae molestias optio ex adipisci repudiandae laudantium velit.</p>
+</div>
+        <div class="README"><div class="README"></div>
 <script>
-    (async function () {
-        var projectUrl = "https://github.com/EvokeMadness/watch-band";
-        var readmeElement = document.querySelector('.README');
+  (async function () {
+    var projectUrl = "https://github.com/EvokeMadness/watch-band";
+    var readmeElement = document.querySelector(".README");
 
-        var rawUrl = projectUrl.replace("github.com", "raw.githubusercontent.com");
-        var readmeUrl = rawUrl.replace("/refs/heads", "/") + "/main/README.md";
+    var rawUrl = projectUrl.replace("github.com", "raw.githubusercontent.com");
+    var readmeUrl = rawUrl.replace("/refs/heads", "/") + "/main/README.md";
 
-        var response = await fetch(readmeUrl);
-        if (!response.ok) {
-            var readmeUrl = rawUrl.replace("/tree", "/") + "/README.md";
-            response = await fetch(readmeUrl);
+    var response = await fetch(readmeUrl);
+    if (!response.ok) {
+      var readmeUrl = rawUrl.replace("/tree", "/") + "/README.md";
+      response = await fetch(readmeUrl);
+    }
+
+    var readme = await response.text(readmeUrl);
+
+    var reader = new commonmark.Parser();
+    var writer = new commonmark.HtmlRenderer();
+    var parsed = reader.parse(readme);
+
+    var walker = parsed.walker();
+    var event, node;
+    var displayPreviews = "true";
+
+    while ((event = walker.next())) {
+      node = event.node;
+      if (
+        event.entering &&
+        node.type === "image" &&
+        displayPreviews === "true"
+      ) {
+        if (node.destination.includes("/blob/")) {
+          node.destination = node.destination + "?raw=true";
+        } else if (!node.destination.startsWith("http")) {
+          node.destination = new URL(node.destination, readmeUrl).href;
         }
-
-        var readme = await response.text(readmeUrl);
-
-        var reader = new commonmark.Parser();
-        var writer = new commonmark.HtmlRenderer();
-        var parsed = reader.parse(readme);
-
-        var walker = parsed.walker();
-        var event, node;
-        var displayPreviews = "true";
-
-        while ((event = walker.next())) {
-            node = event.node;
-            if (event.entering && node.type === 'image' && displayPreviews === "true") {
-                if (node.destination.includes("/blob/")) {
-                    node.destination = node.destination + "?raw=true"
-                } else if (!node.destination.startsWith("http")) {
-                    node.destination = new URL(node.destination, readmeUrl).href;
-                }
-            }
-        }
-        var result = writer.render(parsed);
-        readmeElement.innerHTML = result;
-    })();
+      }
+    }
+    var result = writer.render(parsed);
+    readmeElement.innerHTML = result;
+  })();
 </script>
-        </div>
+</div>
       </div>
       <div class="file-preview">
-        <x3d width='100%' height='100%' showProgress="false">
-    <scene>
-        <background  transparency="1"></background>
-        <inline nameSpaceName="3D Printable Watch Band" url="/content/projects/models/watch-band/preview.x3d"></inline>
-    </scene>
+        <h2>Model Preview</h2>
+        <x3d width="100%" height="100%" showProgress="false">
+  <scene>
+    <background transparency="1"></background>
+    <inline
+      nameSpaceName="3D Printable Watch Band"
+      url="/content/projects/models/watch-band/preview.x3d"
+    ></inline>
+  </scene>
 </x3d>
+
       </div>
     </div>
     <footer class="site-footer">
-     <p>© 2026 EvokeMadness</p>
+  <p>© 2026 EvokeMadness</p>
 </footer>
+
   </body>
 </html>
