@@ -5,7 +5,7 @@ title: MathJax Cheat Sheet
 description:
 date: 2025-05-17
 project-url: https://github.com/EvokeMadness/mathjax-cheat-sheet
-cover: https://github.com/EvokeMadness/mathjax-cheat-sheet/blob/main/assets/preview.png?raw=true
+cover: content/projects/documents/mathjax-cheat-sheet/preview.png
 file-preview: https://raw.githubusercontent.com/EvokeMadness/mathjax-cheat-sheet/main/mathjax-cheat-sheet.pdf
 display-readme-previews: true
 ---
