@@ -65,14 +65,14 @@ button {
     border: 2px solid darkred;
     border-radius: 100%;
   }
+}
 
-  .biography {
-    padding: 1rem;
-    border: 2px solid darkred;
-    border-radius: 0.75rem;
-    background-color: #1f1f1f;
-    font-size: 1.125rem;
-  }
+.biography {
+  padding: 1rem;
+  border: 2px solid darkred;
+  border-radius: 0.75rem;
+  background-color: #1f1f1f;
+  font-size: 1.125rem;
 }
 
 .description-left {
@@ -87,7 +87,7 @@ button {
   color: white;
 }
 
-.document {
+.carousel {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -104,32 +104,8 @@ button {
     color: white;
   }
 
-  img {
-    max-height: 480px;
-    border: 1px solid black;
-    border-radius: 0.75rem;
-  }
-
-  img:hover {
-    scale: 110%;
-  }
-}
-
-.model {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: left;
-  gap: 2rem;
-  margin-block: 0;
-  padding: 2rem;
-  overflow-x: scroll;
-  border-block: 2px solid darkred;
-  background-color: #1f1f1f99;
-  list-style: none;
-
-  a {
-    color: white;
+  li {
+    align-content: center;
   }
 
   img {

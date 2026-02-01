@@ -5,7 +5,7 @@ title: FreeCAD Sketcher Cheat Sheet
 description: FreeCAD hot keys cheat sheet
 date: 2021-12-02
 project-url: https://github.com/EvokeMadness/FreeCAD-sketcher-cheat-sheet
-cover: content/projects/documents/FreeCAD-sketcher-cheat-sheet/preview.png
+cover: content/projects/documents/FreeCAD-sketcher-cheat-sheet/preview-freeCAD-sketcher-constraints.png
 file-preview: https://raw.githubusercontent.com/EvokeMadness/FreeCAD-sketcher-cheat-sheet/main/freeCAD-sketcher-constraints.pdf
 display-readme-previews: true
 ---
