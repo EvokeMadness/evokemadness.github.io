@@ -1,12 +1,12 @@
 ---
 tags: documents
 layout: layouts/document.html
-title: MathJax Cheat Sheet
-description: MathJax cheat sheet
-date: 2025-05-17
-project-url: https://github.com/EvokeMadness/mathjax-cheat-sheet
-cover: content/projects/documents/mathjax-cheat-sheet/preview.png
-file-preview: https://raw.githubusercontent.com/EvokeMadness/mathjax-cheat-sheet/main/mathjax-cheat-sheet.pdf
+title: GD&T Cheat Sheet
+description:
+date: 2026-02-12
+project-url: https://github.com/EvokeMadness/GD_T-cheat-sheet
+cover: content/projects/documents/GD_T-cheat-sheet/preview.png
+file-preview: https://raw.githubusercontent.com/EvokeMadness/GD_T-cheat-sheet/main/GD_T-cheat-sheet-symbols.pdf
 display-readme-previews: true
 ---
 

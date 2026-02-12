@@ -47,7 +47,7 @@
       <h2>Documents</h2>
       <p>Printable quick reference material for software.</p>
     </div>
-    {%- for documents in collections.documents -%}
+    {%- for documents in collections.documents reversed -%}
     <li>
       <a href="{{ documents.url}}">
         <img alt="{{ documents.data.description }}" src="{{ documents.data.cover }}" />
