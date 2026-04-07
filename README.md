@@ -2,7 +2,7 @@
 
 - Visit my site here: [`evokemadness.com`](https://evokemadness.com/)
 
-## Summary
+# Summary
 
 My personal site, which I use as my portfolio. It is hosted on [GitHub Pages](https://docs.github.com/en/pages) and built using [eleventy](https://github.com/11ty/eleventy).
 
