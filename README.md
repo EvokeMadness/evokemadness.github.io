@@ -11,7 +11,6 @@ It features loading for models using [X3DOM](https://www.x3dom.org/), README fil
 - **Other features include:**
 	- Centralized config with array for site metadata and header icons.
 		```
-		
 		title: "/* Full Name */ | Portfolio",
 		url: "",
 		language: "en",
@@ -28,7 +27,6 @@ It features loading for models using [X3DOM](https://www.x3dom.org/), README fil
 		    },
 		  ],
 		},
-		
 		```
 
 * * *
