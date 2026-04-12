@@ -77,9 +77,9 @@
   <ol class="carousel">
     <div class="description-left">
       <h2>Software</h2>
-      <p>Software and plugins.</p>
+      <p>Software, plugins, scripts, and templates.</p>
     </div>
-    {%- for software in collections.software -%}
+    {%- for software in collections.software reversed -%}
     <li>
       <a href="{{ software.url}}">
         <img alt="{{ software.data.description }}" src="{{ software.data.cover }}" />
