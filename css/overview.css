@@ -54,3 +54,17 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.toast {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+
+  h1 {
+    padding: 1rem;
+    border: 2px solid darkred;
+    border-radius: 0.75rem;
+    background-color: #1f1f1f;
+    color: white;
+  }
+}
