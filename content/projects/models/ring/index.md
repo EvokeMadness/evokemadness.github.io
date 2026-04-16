@@ -1,11 +1,11 @@
 ---
 tags: models
 layout: layouts/model.html
-title: Book-Shaped Soap Dish
-description: A soap dish in the shape of a book
-date: 2026-02-18
-project-url: https://github.com/EvokeMadness/book-soap-dish
-cover: https://github.com/EvokeMadness/book-soap-dish/blob/main/assets/preview.png?raw=true
+title: Fidget Sensory Ring
+description: Sensory ring with a satisfying divot!
+date: 2026-01-12
+project-url: https://github.com/EvokeMadness/fidget-spinner/tree/main/ring
+cover: https://github.com/EvokeMadness/fidget-spinner/blob/main/ring/assets/preview-thingiverse.png?raw=true
 display-readme-previews: true
 eleventyComputed:
   file-preview: "content/projects/models/{{ page.fileSlug }}/preview.x3d"

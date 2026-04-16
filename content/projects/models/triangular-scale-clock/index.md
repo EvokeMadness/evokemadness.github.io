@@ -1,11 +1,11 @@
 ---
 tags: models
 layout: layouts/model.html
-title: Sensory Ring
-description: Sensory ring with a satisfying divot!
-date: 2026-01-12
-project-url: https://github.com/EvokeMadness/fidget-spinner/tree/main/ring
-cover: https://github.com/EvokeMadness/fidget-spinner/blob/main/ring/assets/preview-thingiverse.png?raw=true
+title: Triangular Scale Clock
+description: A clock in the shape of the profile of an architect scale
+date: 2026-02-18
+project-url: https://github.com/EvokeMadness/triangular-scale-clock
+cover: https://github.com/EvokeMadness/triangular-scale-clock/blob/main/assets/preview-printables.png?raw=true
 display-readme-previews: true
 eleventyComputed:
   file-preview: "content/projects/models/{{ page.fileSlug }}/preview.x3d"

@@ -30,7 +30,7 @@
         <h2>CAD Projects</h2>
         <p>3D model projects.</p>
       </div>
-      {%- for models in collections.models -%}
+      {%- for models in collections.models reversed -%}
       <li>
         <a href="{{ models.url}}">
           <img alt="{{ models.data.description }}" src="{{ models.data.cover }}" />
