@@ -19,16 +19,12 @@ module.exports = {
         icon: "fa-brands fa-linkedin-in",
       },
       {
-        link: "https://linktr.ee/EvokeMadness",
-        icon: "fa-brands fa-linktree",
-      },
-      {
         link: "https://unsplash.com/@evokemadness",
         icon: "fa-brands fa-unsplash",
       },
       {
-        link: "https://evokemadness.itch.io/",
-        icon: "fa-brands fa-itch-io",
+        link: "https://archive.org/details/@allie_gonzales489",
+        icon: "fa-solid fa-building-columns",
       },
     ],
   },
