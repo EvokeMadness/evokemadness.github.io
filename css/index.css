@@ -11,17 +11,6 @@ h2 {
   color: white;
 }
 
-h3 {
-  display: table;
-  margin: 0 auto;
-  margin-top: 1.625rem;
-  padding-inline: 1rem;
-  padding-block: 0.125rem;
-  border: 1px solid black;
-  border-radius: 8px;
-  background-color: #1f1f1f;
-}
-
 code {
   padding: 4px;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
@@ -116,6 +105,17 @@ button {
 
   img:hover {
     scale: 110%;
+  }
+
+  .carousel-item {
+    display: table;
+    margin: 0 auto;
+    margin-top: 1.625rem;
+    padding-inline: 1rem;
+    padding-block: 0.125rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #1f1f1f;
   }
 }
 
