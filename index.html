@@ -34,7 +34,7 @@
       <li>
         <a href="{{ models.url}}">
           <img alt="{{ models.data.description }}" src="{{ models.data.cover }}" />
-          <h3>{{ models.data.title }}</h3>
+          <h3 class="carousel-item">{{ models.data.title }}</h3>
         </a>
       </li>
       {%- endfor -%}
@@ -51,7 +51,7 @@
     <li>
       <a href="{{ documents.url}}">
         <img alt="{{ documents.data.description }}" src="{{ documents.data.cover }}" />
-        <h3>{{ documents.data.title }}</h3>
+        <h3 class="carousel-item">{{ documents.data.title }}</h3>
       </a>
     </li>
     {%- endfor -%}
@@ -67,7 +67,7 @@
     <li>
       <a href="{{ note-cards.url}}">
         <img alt="{{ note-cards.data.description }}" src="{{ note-cards.data.cover }}" />
-        <h3>{{ note-cards.data.title }}</h3>
+        <h3 class="carousel-item">{{ note-cards.data.title }}</h3>
       </a>
     </li>
     {%- endfor -%}
@@ -83,7 +83,7 @@
     <li>
       <a href="{{ software.url}}">
         <img alt="{{ software.data.description }}" src="{{ software.data.cover }}" />
-        <h3>{{ software.data.title }}</h3>
+        <h3 class="carousel-item">{{ software.data.title }}</h3>
       </a>
     </li>
     {%- endfor -%}
