@@ -8,18 +8,20 @@ eleventyExcludeFromCollections: true
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
     <title>{{ metadata.author.name }} | 404</title>
+    <meta name="description" content="Page not found on {{ metadata.author.name }}'s portfolio." />
     <link rel="icon" type="image/svg" href="/favicon.svg" />
     <link rel="stylesheet" href="{{ url }}/css/overview.css" />
   </head>
 
   <body>
     {% include "layouts/header.html" %}
-    <div class="toast">
-      <h1>
-        <b>404.</b> Content not found. Go <a href="/">home</a>.
-      </h1>
-    </div>
+    <main>
+      <div class="toast">
+        <h1><b>404.</b> Content not found. Go <a href="/">home</a>.</h1>
+      </div>
+    </main>
     {% include "layouts/footer.html" %}
   </body>
 </html>
