@@ -1,98 +1,81 @@
-<!doctype html>
-<html lang="en-US">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ metadata.title }}</title>
-  <meta name="description" content="{{ metadata.description }}" />
-  <link rel="icon" type="image/svg" href="/favicon.svg" />
-  <link rel="canonical" href="{{ metadata.url }}" />
-  <link rel="stylesheet" href="/css/index.css" />
-</head>
-
-<body style="background-image: url(/assets/meizhi-lang-FkeX3sPH22g-unsplash.jpg)">
-  {% include "layouts/header.html" %}
-
-  <div class="hero">
-    <img src="assets/43455846.jpg" alt="Profile picture" />
-    <div class="biography">
-      <p>
-        I'm a maker and independent learner. I make content in several
-        different mediums, because I am always excited to learn new skills and
-        disciplines!
-      </p>
-    </div>
+---
+layout: layouts/base.html
+bodyStyle: "background-image: url(/assets/meizhi-lang-FkeX3sPH22g-unsplash.jpg)"
+---
+<div class="hero">
+  <img src="{{ metadata.author.avatar }}" alt="{{ metadata.author.name }} profile photo" />
+  <div class="biography">
+    <p>
+      I'm a maker and independent learner. I make content in several
+      different mediums, because I am always excited to learn new skills and
+      disciplines!
+    </p>
   </div>
+</div>
 
-  <div class="main-content">
-    <ol class="carousel">
-      <div class="description-left">
-        <h2>CAD Projects</h2>
-        <p>3D model projects.</p>
-      </div>
-      {%- for models in collections.models reversed -%}
-      <li>
-        <a href="{{ models.url}}">
-          <img alt="{{ models.data.description }}" src="{{ models.data.cover }}" />
-          <h3 class="carousel-item">{{ models.data.title }}</h3>
-        </a>
-      </li>
-      {%- endfor -%}
-    </ol>
+<div class="main-content">
+  <ol class="carousel">
+    <div class="description-left">
+      <h2>CAD Projects</h2>
+      <p>3D model projects.</p>
+    </div>
+    {%- for models in collections.models reversed -%}
+    <li>
+      <a href="{{ models.url}}">
+        <img alt="{{ models.data.description }}" src="{{ models.data.cover }}" />
+        <h3 class="carousel-item">{{ models.data.title }}</h3>
+      </a>
+    </li>
+    {%- endfor -%}
+  </ol>
+</div>
+
+<div style="height: 2rem"></div>
+<ol class="carousel">
+  <div class="description-left">
+    <h2>Documents</h2>
+    <p>Printable quick reference material for software.</p>
   </div>
+  {%- for documents in collections.documents reversed -%}
+  <li>
+    <a href="{{ documents.url}}">
+      <img alt="{{ documents.data.description }}" src="{{ documents.data.cover }}" />
+      <h3 class="carousel-item">{{ documents.data.title }}</h3>
+    </a>
+  </li>
+  {%- endfor -%}
+</ol>
 
-  <div style="height: 2rem"></div>
-  <ol class="carousel">
-    <div class="description-left">
-      <h2>Documents</h2>
-      <p>Printable quick reference material for software.</p>
-    </div>
-    {%- for documents in collections.documents reversed -%}
-    <li>
-      <a href="{{ documents.url}}">
-        <img alt="{{ documents.data.description }}" src="{{ documents.data.cover }}" />
-        <h3 class="carousel-item">{{ documents.data.title }}</h3>
-      </a>
-    </li>
-    {%- endfor -%}
-  </ol>
+<div style="height: 2rem"></div>
+<ol class="carousel">
+  <div class="description-left">
+    <h2>Note Cards</h2>
+    <p>Printable quick reference material.</p>
+  </div>
+  {%- for note-cards in collections.note-cards -%}
+  <li>
+    <a href="{{ note-cards.url}}">
+      <img alt="{{ note-cards.data.description }}" src="{{ note-cards.data.cover }}" />
+      <h3 class="carousel-item">{{ note-cards.data.title }}</h3>
+    </a>
+  </li>
+  {%- endfor -%}
+</ol>
 
-  <div style="height: 2rem"></div>
-  <ol class="carousel">
-    <div class="description-left">
-      <h2>Note Cards</h2>
-      <p>Printable quick reference material.</p>
-    </div>
-    {%- for note-cards in collections.note-cards -%}
-    <li>
-      <a href="{{ note-cards.url}}">
-        <img alt="{{ note-cards.data.description }}" src="{{ note-cards.data.cover }}" />
-        <h3 class="carousel-item">{{ note-cards.data.title }}</h3>
-      </a>
-    </li>
-    {%- endfor -%}
-  </ol>
+<div style="height: 2rem"></div>
+<ol class="carousel">
+  <div class="description-left">
+    <h2>Software</h2>
+    <p>Software, plugins, scripts, and templates.</p>
+  </div>
+  {%- for software in collections.software reversed -%}
+  <li>
+    <a href="{{ software.url}}">
+      <img alt="{{ software.data.description }}" src="{{ software.data.cover }}" />
+      <h3 class="carousel-item">{{ software.data.title }}</h3>
+    </a>
+  </li>
+  {%- endfor -%}
+</ol>
 
-  <div style="height: 2rem"></div>
-  <ol class="carousel">
-    <div class="description-left">
-      <h2>Software</h2>
-      <p>Software, plugins, scripts, and templates.</p>
-    </div>
-    {%- for software in collections.software reversed -%}
-    <li>
-      <a href="{{ software.url}}">
-        <img alt="{{ software.data.description }}" src="{{ software.data.cover }}" />
-        <h3 class="carousel-item">{{ software.data.title }}</h3>
-      </a>
-    </li>
-    {%- endfor -%}
-  </ol>
-
-  <div style="height: 2rem"></div>
-
-  {% include "layouts/footer.html" %}
-</body>
-
-</html>
+<div style="height: 2rem"></div>

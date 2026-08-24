@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if title %}{{ title }} | {{ metadata.author.name }}{% else %}{{ metadata.title }}{% endif %}</title>
+    <meta name="description" content="{{ description | default: metadata.description }}" />
+    <link rel="canonical" href="{{ metadata.url }}{{ page.url }}" />
+    <link rel="icon" type="image/svg" href="/favicon.svg" />
+
+    <!-- Google General Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "ProfilePage",
+      "name": "{{ metadata.title }}",
+      "image": [
+        "{{ metadata.url }}{{ metadata.author.avatar }}"
+      ],
+      "description": "{{ metadata.description }}"
+    }
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="{{ metadata.title }}" />
+    <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ metadata.title }}{% endif %}" />
+    <meta property="og:description" content="{{ description | default: metadata.description }}" />
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{% if cover %}{% if cover contains 'http' %}{{ cover }}{% else %}{{ metadata.url }}{{ cover }}{% endif %}{% else %}{{ metadata.url }}{{ metadata.author.avatar }}{% endif %}" />
+    <meta property="og:image:secure_url" content="{% if cover %}{% if cover contains 'http' %}{{ cover }}{% else %}{{ metadata.url }}{{ cover }}{% endif %}{% else %}{{ metadata.url }}{{ metadata.author.avatar }}{% endif %}" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="{% if cover %}summary_large_image{% else %}summary{% endif %}" />
+    <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ metadata.title }}{% endif %}" />
+    <meta name="twitter:description" content="{{ description | default: metadata.description }}" />
+    <meta name="twitter:image" content="{% if cover %}{% if cover contains 'http' %}{{ cover }}{% else %}{{ metadata.url }}{{ cover }}{% endif %}{% else %}{{ metadata.url }}{{ metadata.author.avatar }}{% endif %}" />
+
+    <!-- FontAwesome & Stylesheets -->
+    <script
+      src="https://kit.fontawesome.com/b40ef46d77.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/compass-theme.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body {% if bodyStyle %}style="{{ bodyStyle }}"{% endif %}>
+    {% include "layouts/header.html" %}
+    <main>
+      {{ content }}
+    </main>
+    {% include "layouts/footer.html" %}
+  </body>
+</html>

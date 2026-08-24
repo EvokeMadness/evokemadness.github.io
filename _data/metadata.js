@@ -8,6 +8,7 @@ module.exports = {
     name: "Allie Gonzales",
     username: "EvokeMadness",
     email: "antgonzales9643@gmail.com",
+    avatar: "assets/43455846.jpg",
 
     links: [
       {
