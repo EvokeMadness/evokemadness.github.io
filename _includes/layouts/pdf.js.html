@@ -1,21 +1,21 @@
-<canvas
-  id="the-canvas"
-  style="
-    width: 80%;
-    display: block;
-    margin: auto;
-    padding-top: 2rem;
-    padding-inline: 2rem;
-  "
-></canvas>
-
-<span style="display: flex; justify-content: center; padding-top: 1rem"
+<span style="display: flex; justify-content: center"
   >Page: <span id="page_num"></span> / <span id="page_count"></span
 ></span>
 
+<canvas
+  id="the-canvas"
+  style="
+    width: 85%;
+    max-width: 100%;
+    display: block;
+    margin: 1.5rem auto;
+    box-sizing: border-box;
+  "
+></canvas>
+
 <div class="navigation">
-  <button id="prev">Previous</button>
-  <button id="next">Next</button>
+  <button id="prev" type="button" style="visibility: hidden">Previous</button>
+  <button id="next" type="button" style="visibility: hidden">Next</button>
 </div>
 
 <script
@@ -62,6 +62,18 @@
     });
 
     document.getElementById("page_num").textContent = num;
+
+    if (pdfDoc.numPages <= 1) {
+      document.getElementById("prev").style.display = "none";
+      document.getElementById("next").style.display = "none";
+    } else {
+      document.getElementById("prev").style.display = "";
+      document.getElementById("next").style.display = "";
+      document.getElementById("prev").style.visibility =
+        num <= 1 ? "hidden" : "visible";
+      document.getElementById("next").style.visibility =
+        num >= pdfDoc.numPages ? "hidden" : "visible";
+    }
   }
 
   function queueRenderPage(num) {

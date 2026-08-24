@@ -53,6 +53,18 @@ body {
   gap: 0.5rem;
   justify-content: center;
   align-items: center;
+
+  button {
+    width: 5rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    color: gold;
+    background-color: #1f1f1f;
+    border-color: silver;
+    cursor: pointer;
+  }
 }
 
 .toast {

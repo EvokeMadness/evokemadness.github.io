@@ -26,16 +26,6 @@ a {
   text-decoration: none;
 }
 
-button {
-  width: 5rem;
-  aspect-ratio: 1;
-  border-radius: 100%;
-  margin-block: 1rem;
-  font-weight: bolder;
-  color: gold;
-  background-color: #1f1f1f;
-  border-color: silver;
-}
 
 .hero {
   display: flex;

@@ -9,14 +9,23 @@
 
     var response = await fetch(readmeUrl);
     if (!response.ok) {
+      var readmeUrl = rawUrl.replace("/refs/heads", "/") + "/master/README.md";
+      response = await fetch(readmeUrl);
+    }
+    if (!response.ok) {
       var readmeUrl = rawUrl.replace("/tree", "/") + "/README.md";
       response = await fetch(readmeUrl);
     }
+    if (!response.ok) return;
+
+    var blobBase =
+      projectUrl.replace(/\/$/, "") +
+      (readmeUrl.includes("/master/") ? "/blob/master/" : "/blob/main/");
 
     var readme = await response.text(readmeUrl);
 
     var reader = new commonmark.Parser();
-    var writer = new commonmark.HtmlRenderer();
+    var writer = new commonmark.HtmlRenderer({ safe: true });
     var parsed = reader.parse(readme);
 
     var walker = parsed.walker();
@@ -25,15 +34,71 @@
 
     while ((event = walker.next())) {
       node = event.node;
-      if (
-        event.entering &&
-        node.type === "image" &&
-        displayPreviews === "true"
-      ) {
-        if (node.destination.includes("/blob/")) {
-          node.destination = node.destination + "?raw=true";
-        } else if (!node.destination.startsWith("http")) {
-          node.destination = new URL(node.destination, readmeUrl).href;
+      if (event.entering) {
+        if (
+          node.type === "image" &&
+          displayPreviews === "true"
+        ) {
+          if (node.destination.includes("/blob/")) {
+            node.destination =
+              node.destination +
+              (node.destination.includes("?") ? "&raw=true" : "?raw=true");
+          } else if (
+            !node.destination.startsWith("http://") &&
+            !node.destination.startsWith("https://") &&
+            !node.destination.startsWith("//") &&
+            !node.destination.startsWith("data:")
+          ) {
+            try {
+              node.destination = new URL(node.destination, readmeUrl).href;
+            } catch (e) {}
+          }
+        } else if (
+          (node.type === "html_block" || node.type === "html_inline") &&
+          displayPreviews === "true"
+        ) {
+          if (node.literal && node.literal.includes("<img")) {
+            node.literal = node.literal.replace(
+              /src=["']([^"']+)["']/gi,
+              function (match, src) {
+                if (src.includes("/blob/"))
+                  return (
+                    'src="' +
+                    src +
+                    (src.includes("?") ? "&raw=true" : "?raw=true") +
+                    '"'
+                  );
+                if (
+                  !src.startsWith("http://") &&
+                  !src.startsWith("https://") &&
+                  !src.startsWith("//") &&
+                  !src.startsWith("data:")
+                ) {
+                  try {
+                    return 'src="' + new URL(src, readmeUrl).href + '"';
+                  } catch (e) {}
+                }
+                return match;
+              }
+            );
+          }
+        } else if (node.type === "link") {
+          if (
+            node.destination &&
+            !node.destination.startsWith("#") &&
+            !node.destination.startsWith("http://") &&
+            !node.destination.startsWith("https://") &&
+            !node.destination.startsWith("//") &&
+            !node.destination.startsWith("mailto:") &&
+            !node.destination.startsWith("tel:")
+          ) {
+            try {
+              var resolved = new URL(node.destination, blobBase);
+              if (resolved.origin === new URL(blobBase).origin) {
+                node.destination = resolved.href;
+              }
+            } catch (e) {}
+          }
         }
       }
     }
