@@ -4,6 +4,9 @@ module.exports = {
   language: "en",
   description:
     "I'm a maker and independent learner. I make content in several different mediums, because I am always excited to learn new skills and disciplines!",
+  theme: {
+    heroBackground: "/assets/meizhi-lang-FkeX3sPH22g-unsplash.jpg",
+  },
   skills: [
     "3D Modeling",
     "3D Printing",
@@ -27,6 +30,32 @@ module.exports = {
     "Linux",
     "Git",
     "GitHub",
+  ],
+  sections: [
+    {
+      tag: "models",
+      title: "CAD Projects",
+      description: "3D model projects.",
+      reversed: true,
+    },
+    {
+      tag: "documents",
+      title: "Documents",
+      description: "Printable quick reference material for software.",
+      reversed: true,
+    },
+    {
+      tag: "note-cards",
+      title: "Note Cards",
+      description: "Printable quick reference material.",
+      reversed: false,
+    },
+    {
+      tag: "software",
+      title: "Software",
+      description: "Software, plugins, scripts, and templates.",
+      reversed: true,
+    },
   ],
   author: {
     name: "Allie Gonzales",
