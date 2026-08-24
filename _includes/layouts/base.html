@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% if title %}{{ title }} | {{ metadata.author.name }}{% else %}{{ metadata.title }}{% endif %}</title>
     <meta name="description" content="{{ description | default: metadata.description }}" />
+    <meta name="keywords" content="{% if tags %}{{ tags | join: ', ' }}, {% endif %}{{ metadata.skills | join: ', ' }}" />
     <link rel="canonical" href="{{ metadata.url }}{{ page.url }}" />
     <link rel="icon" type="image/svg" href="/favicon.svg" />
 
-    <!-- Google General Structured Data (JSON-LD) -->
+    <!-- Google Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
@@ -17,7 +18,22 @@
       "image": [
         "{{ metadata.url }}{{ metadata.author.avatar }}"
       ],
-      "description": "{{ metadata.description }}"
+      "description": "{{ metadata.description }}",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "{{ metadata.author.name }}",
+        "url": "{{ metadata.url }}",
+        "sameAs": [
+          {%- for link in metadata.author.links -%}
+          "{{ link.link }}"{%- unless forloop.last -%},{%- endunless -%}
+          {%- endfor -%}
+        ],
+        "knowsAbout": [
+          {%- for skill in metadata.skills -%}
+          "{{ skill }}"{%- unless forloop.last -%},{%- endunless -%}
+          {%- endfor -%}
+        ]
+      }
     }
     </script>
 

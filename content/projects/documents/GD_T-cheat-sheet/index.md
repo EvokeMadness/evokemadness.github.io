@@ -2,7 +2,7 @@
 tags: documents
 layout: layouts/document.html
 title: GD&T Cheat Sheet
-description:
+description: GD&T Cheat Sheet
 date: 2026-02-12
 project-url: https://github.com/EvokeMadness/GD_T-cheat-sheet
 cover: content/projects/documents/GD_T-cheat-sheet/preview.png
