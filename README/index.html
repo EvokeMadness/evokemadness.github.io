@@ -8,16 +8,30 @@
 <ul>
 <li><strong>Other features include:</strong>
 <ul>
-<li>Centralized config with array for site metadata and header icons.<pre><code>title: &quot;/* Full Name */ | Portfolio&quot;,
+<li>Centralized config with site metadata, skills, and header icon links:<pre><code class="language-javascript">title: &quot;/* Full Name */ | Portfolio&quot;,
 url: &quot;&quot;,
 language: &quot;en&quot;,
-description:
-  /* Bio */
+description: &quot;/* Bio */&quot;,
+theme: {
+  heroBackground: &quot;/* Path to Hero Background Image */&quot;,
+},
+skills: [
+  /* Array of Skills &amp; SEO Tags */
+],
+sections: [
+  {
+    tag: &quot;/* collection tag */&quot;,
+    title: &quot;/* Section Title */&quot;,
+    description: &quot;/* Section Description */&quot;,
+    reversed: true,
+  },
+],
 author: {
   name: &quot;/* Author Name */&quot;,
   username: &quot;/* Username */&quot;,
   email: &quot;/* Email */&quot;,
-   links: [
+  avatar: &quot;/* Avatar Path */&quot;,
+  links: [
     {
       link: &quot;/* Link */&quot;,
       icon: &quot;/* Icon Link */&quot;,
@@ -26,6 +40,9 @@ author: {
 },
 </code></pre>
 </li>
+<li>Dynamic SEO, Open Graph, Twitter Cards, and Schema.org JSON-LD metadata.</li>
+<li>Automated <code>sitemap.xml</code> generation and <code>robots.txt</code>.</li>
+<li>Extensible layout chaining and data-driven carousel sections.</li>
 </ul>
 </li>
 </ul>
