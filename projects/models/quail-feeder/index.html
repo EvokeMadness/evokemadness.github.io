@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customizable Quail Feeder | Allison Gonzales</title>
+    <meta name="description" content="A quail feeder designed to be customized by the number of units needed." />
+    <meta name="keywords" content="models, 3D Modeling, 3D Printing, 3D Rendering, Mechanical Drawings, AutoCAD, Autodesk Fusion 360, Autodesk Inventor, FreeCAD, QCAD, Alibre Design, SketchUp, OpenVSP, Gmsh, MeshLab, SALOME, Blender, 3D Animation, Inkscape, Technical Writing, Linux, Git, GitHub" />
+    <link rel="canonical" href="https://evokemadness.com//projects/models/quail-feeder/" />
+    <link rel="icon" type="image/svg" href="/favicon.svg" />
+
+    <!-- Google Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "ProfilePage",
+      "name": "Allie Gonzales | Portfolio",
+      "image": [
+        "https://evokemadness.com/img/43455846.jpg"
+      ],
+      "description": "I'm a maker and independent learner. I make content in several different mediums, because I am always excited to learn new skills and disciplines!",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Allison Gonzales",
+        "url": "https://evokemadness.com/",
+        "sameAs": ["https://github.com/EvokeMadness","https://www.linkedin.com/in/evokemadness/","https://unsplash.com/@evokemadness","https://archive.org/details/@allie_gonzales489"],
+        "knowsAbout": ["3D Modeling","3D Printing","3D Rendering","Mechanical Drawings","AutoCAD","Autodesk Fusion 360","Autodesk Inventor","FreeCAD","QCAD","Alibre Design","SketchUp","OpenVSP","Gmsh","MeshLab","SALOME","Blender","3D Animation","Inkscape","Technical Writing","Linux","Git","GitHub"]
+      }
+    }
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Allie Gonzales | Portfolio" />
+    <meta property="og:title" content="Customizable Quail Feeder" />
+    <meta property="og:description" content="A quail feeder designed to be customized by the number of units needed." />
+    <meta property="og:url" content="https://evokemadness.com//projects/models/quail-feeder/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://github.com/EvokeMadness/quail-feeder/blob/main/assets/preview-thingiverse.png?raw=true" />
+    <meta property="og:image:secure_url" content="https://github.com/EvokeMadness/quail-feeder/blob/main/assets/preview-thingiverse.png?raw=true" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Customizable Quail Feeder" />
+    <meta name="twitter:description" content="A quail feeder designed to be customized by the number of units needed." />
+    <meta name="twitter:image" content="https://github.com/EvokeMadness/quail-feeder/blob/main/assets/preview-thingiverse.png?raw=true" />
+
+    <!-- FontAwesome & Stylesheets -->
+    <script
+      src="https://kit.fontawesome.com/b40ef46d77.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <header>
+  <div class="header-row">
+    <a href="/">
+      <h1 style="font-weight: normal;">
+        EvokeMadness
+      </h1>
+    </a>
+    <div>
+      
+      <a href="https://github.com/EvokeMadness">
+        <i class="fa-brands fa-github" style="font-size: 36px;"></i>
+      </a>
+      
+      <a href="https://www.linkedin.com/in/evokemadness/">
+        <i class="fa-brands fa-linkedin-in" style="font-size: 36px;"></i>
+      </a>
+      
+      <a href="https://unsplash.com/@evokemadness">
+        <i class="fa-brands fa-unsplash" style="font-size: 36px;"></i>
+      </a>
+      
+      <a href="https://archive.org/details/@allie_gonzales489">
+        <i class="fa-solid fa-building-columns" style="font-size: 36px;"></i>
+      </a>
+      
+    </div>
+  </div>
+</header>
+
+    <main>
+      <link rel="stylesheet" href="/css/content.css" />
+<script
+  defer
+  type="text/javascript"
+  src="https://unpkg.com/x3dom@1.8.3/x3dom.js"
+></script>
+<script src="https://unpkg.com/commonmark@0.29.3/dist/commonmark.js"></script>
+
+<div class="content-README">
+  <div class="content"><h1>Heading 1</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quis placeat sequi et, saepe voluptatem pariatur vitae accusamus ullam est? Cupiditate beatae quae molestias optio ex adipisci repudiandae laudantium velit.</p>
+</div>
+  <div class="README"><div class="README"></div>
+<script>
+  (async function () {
+    var projectUrl = "https://github.com/EvokeMadness/quail-feeder";
+    var readmeElement = document.querySelector(".README");
+
+    var rawUrl = projectUrl.replace("github.com", "raw.githubusercontent.com");
+    var readmeUrl = rawUrl.replace("/refs/heads", "/") + "/main/README.md";
+
+    var response = await fetch(readmeUrl);
+    if (!response.ok) {
+      var readmeUrl = rawUrl.replace("/refs/heads", "/") + "/master/README.md";
+      response = await fetch(readmeUrl);
+    }
+    if (!response.ok) {
+      var readmeUrl = rawUrl.replace("/tree", "/") + "/README.md";
+      response = await fetch(readmeUrl);
+    }
+    if (!response.ok) return;
+
+    var blobBase =
+      projectUrl.replace(/\/$/, "") +
+      (readmeUrl.includes("/master/") ? "/blob/master/" : "/blob/main/");
+
+    var readme = await response.text(readmeUrl);
+
+    var reader = new commonmark.Parser();
+    var writer = new commonmark.HtmlRenderer({ safe: true });
+    var parsed = reader.parse(readme);
+
+    var walker = parsed.walker();
+    var event, node;
+    var displayPreviews = "true";
+
+    while ((event = walker.next())) {
+      node = event.node;
+      if (event.entering) {
+        if (
+          node.type === "image" &&
+          displayPreviews === "true"
+        ) {
+          if (node.destination.includes("/blob/")) {
+            node.destination =
+              node.destination +
+              (node.destination.includes("?") ? "&raw=true" : "?raw=true");
+          } else if (
+            !node.destination.startsWith("http://") &&
+            !node.destination.startsWith("https://") &&
+            !node.destination.startsWith("//") &&
+            !node.destination.startsWith("data:")
+          ) {
+            try {
+              node.destination = new URL(node.destination, readmeUrl).href;
+            } catch (e) {}
+          }
+        } else if (
+          (node.type === "html_block" || node.type === "html_inline") &&
+          displayPreviews === "true"
+        ) {
+          if (node.literal && node.literal.includes("<img")) {
+            node.literal = node.literal.replace(
+              /src=["']([^"']+)["']/gi,
+              function (match, src) {
+                if (src.includes("/blob/"))
+                  return (
+                    'src="' +
+                    src +
+                    (src.includes("?") ? "&raw=true" : "?raw=true") +
+                    '"'
+                  );
+                if (
+                  !src.startsWith("http://") &&
+                  !src.startsWith("https://") &&
+                  !src.startsWith("//") &&
+                  !src.startsWith("data:")
+                ) {
+                  try {
+                    return 'src="' + new URL(src, readmeUrl).href + '"';
+                  } catch (e) {}
+                }
+                return match;
+              }
+            );
+          }
+        } else if (node.type === "link") {
+          if (
+            node.destination &&
+            !node.destination.startsWith("#") &&
+            !node.destination.startsWith("http://") &&
+            !node.destination.startsWith("https://") &&
+            !node.destination.startsWith("//") &&
+            !node.destination.startsWith("mailto:") &&
+            !node.destination.startsWith("tel:")
+          ) {
+            try {
+              var resolved = new URL(node.destination, blobBase);
+              if (resolved.origin === new URL(blobBase).origin) {
+                node.destination = resolved.href;
+              }
+            } catch (e) {}
+          }
+        }
+      }
+    }
+    var result = writer.render(parsed);
+    readmeElement.innerHTML = result;
+  })();
+</script>
+</div>
+</div>
+<div class="file-preview" style="width: 480px;">
+  <h1>Model Preview</h1>
+  <x3d width="100%" height="100%" showProgress="false">
+  <scene>
+    <background transparency="1"></background>
+    <inline
+      nameSpaceName="Customizable Quail Feeder"
+      url="/content/projects/models/quail-feeder/preview.x3d"
+    ></inline>
+  </scene>
+</x3d>
+
+</div>
+
+    </main>
+    <footer class="site-footer">
+  <p>© 2026 EvokeMadness</p>
+</footer>
+
+  </body>
+</html>

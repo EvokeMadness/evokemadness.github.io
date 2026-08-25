@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreeCAD Sketcher Cheat Sheet | Allison Gonzales</title>
+    <meta name="description" content="FreeCAD hot keys cheat sheet" />
+    <meta name="keywords" content="documents, 3D Modeling, 3D Printing, 3D Rendering, Mechanical Drawings, AutoCAD, Autodesk Fusion 360, Autodesk Inventor, FreeCAD, QCAD, Alibre Design, SketchUp, OpenVSP, Gmsh, MeshLab, SALOME, Blender, 3D Animation, Inkscape, Technical Writing, Linux, Git, GitHub" />
+    <link rel="canonical" href="https://evokemadness.com//projects/documents/FreeCAD-sketcher-cheat-sheet/" />
+    <link rel="icon" type="image/svg" href="/favicon.svg" />
+
+    <!-- Google Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "ProfilePage",
+      "name": "Allie Gonzales | Portfolio",
+      "image": [
+        "https://evokemadness.com/img/43455846.jpg"
+      ],
+      "description": "I'm a maker and independent learner. I make content in several different mediums, because I am always excited to learn new skills and disciplines!",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Allison Gonzales",
+        "url": "https://evokemadness.com/",
+        "sameAs": ["https://github.com/EvokeMadness","https://www.linkedin.com/in/evokemadness/","https://unsplash.com/@evokemadness","https://archive.org/details/@allie_gonzales489"],
+        "knowsAbout": ["3D Modeling","3D Printing","3D Rendering","Mechanical Drawings","AutoCAD","Autodesk Fusion 360","Autodesk Inventor","FreeCAD","QCAD","Alibre Design","SketchUp","OpenVSP","Gmsh","MeshLab","SALOME","Blender","3D Animation","Inkscape","Technical Writing","Linux","Git","GitHub"]
+      }
+    }
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Allie Gonzales | Portfolio" />
+    <meta property="og:title" content="FreeCAD Sketcher Cheat Sheet" />
+    <meta property="og:description" content="FreeCAD hot keys cheat sheet" />
+    <meta property="og:url" content="https://evokemadness.com//projects/documents/FreeCAD-sketcher-cheat-sheet/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://evokemadness.com/content/projects/documents/FreeCAD-sketcher-cheat-sheet/preview.png" />
+    <meta property="og:image:secure_url" content="https://evokemadness.com/content/projects/documents/FreeCAD-sketcher-cheat-sheet/preview.png" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FreeCAD Sketcher Cheat Sheet" />
+    <meta name="twitter:description" content="FreeCAD hot keys cheat sheet" />
+    <meta name="twitter:image" content="https://evokemadness.com/content/projects/documents/FreeCAD-sketcher-cheat-sheet/preview.png" />
+
+    <!-- FontAwesome & Stylesheets -->
+    <script
+      src="https://kit.fontawesome.com/b40ef46d77.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <header>
+  <div class="header-row">
+    <a href="/">
+      <h1 style="font-weight: normal;">
+        EvokeMadness
+      </h1>
+    </a>
+    <div>
+      
+      <a href="https://github.com/EvokeMadness">
+        <i class="fa-brands fa-github" style="font-size: 36px;"></i>
+      </a>
+      
+      <a href="https://www.linkedin.com/in/evokemadness/">
+        <i class="fa-brands fa-linkedin-in" style="font-size: 36px;"></i>
+      </a>
+      
+      <a href="https://unsplash.com/@evokemadness">
+        <i class="fa-brands fa-unsplash" style="font-size: 36px;"></i>
+      </a>
+      
+      <a href="https://archive.org/details/@allie_gonzales489">
+        <i class="fa-solid fa-building-columns" style="font-size: 36px;"></i>
+      </a>
+      
+    </div>
+  </div>
+</header>
+
+    <main>
+      <link rel="stylesheet" href="/css/content.css" />
+<script src="https://unpkg.com/commonmark@0.29.3/dist/commonmark.js"></script>
+
+<div class="content-README">
+  <div class="content"><h1>Heading 1</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quis placeat sequi et, saepe voluptatem pariatur vitae accusamus ullam est? Cupiditate beatae quae molestias optio ex adipisci repudiandae laudantium velit.</p>
+</div>
+  <div class="README"><div class="README"></div>
+<script>
+  (async function () {
+    var projectUrl = "https://github.com/EvokeMadness/FreeCAD-sketcher-cheat-sheet";
+    var readmeElement = document.querySelector(".README");
+
+    var rawUrl = projectUrl.replace("github.com", "raw.githubusercontent.com");
+    var readmeUrl = rawUrl.replace("/refs/heads", "/") + "/main/README.md";
+
+    var response = await fetch(readmeUrl);
+    if (!response.ok) {
+      var readmeUrl = rawUrl.replace("/refs/heads", "/") + "/master/README.md";
+      response = await fetch(readmeUrl);
+    }
+    if (!response.ok) {
+      var readmeUrl = rawUrl.replace("/tree", "/") + "/README.md";
+      response = await fetch(readmeUrl);
+    }
+    if (!response.ok) return;
+
+    var blobBase =
+      projectUrl.replace(/\/$/, "") +
+      (readmeUrl.includes("/master/") ? "/blob/master/" : "/blob/main/");
+
+    var readme = await response.text(readmeUrl);
+
+    var reader = new commonmark.Parser();
+    var writer = new commonmark.HtmlRenderer({ safe: true });
+    var parsed = reader.parse(readme);
+
+    var walker = parsed.walker();
+    var event, node;
+    var displayPreviews = "true";
+
+    while ((event = walker.next())) {
+      node = event.node;
+      if (event.entering) {
+        if (
+          node.type === "image" &&
+          displayPreviews === "true"
+        ) {
+          if (node.destination.includes("/blob/")) {
+            node.destination =
+              node.destination +
+              (node.destination.includes("?") ? "&raw=true" : "?raw=true");
+          } else if (
+            !node.destination.startsWith("http://") &&
+            !node.destination.startsWith("https://") &&
+            !node.destination.startsWith("//") &&
+            !node.destination.startsWith("data:")
+          ) {
+            try {
+              node.destination = new URL(node.destination, readmeUrl).href;
+            } catch (e) {}
+          }
+        } else if (
+          (node.type === "html_block" || node.type === "html_inline") &&
+          displayPreviews === "true"
+        ) {
+          if (node.literal && node.literal.includes("<img")) {
+            node.literal = node.literal.replace(
+              /src=["']([^"']+)["']/gi,
+              function (match, src) {
+                if (src.includes("/blob/"))
+                  return (
+                    'src="' +
+                    src +
+                    (src.includes("?") ? "&raw=true" : "?raw=true") +
+                    '"'
+                  );
+                if (
+                  !src.startsWith("http://") &&
+                  !src.startsWith("https://") &&
+                  !src.startsWith("//") &&
+                  !src.startsWith("data:")
+                ) {
+                  try {
+                    return 'src="' + new URL(src, readmeUrl).href + '"';
+                  } catch (e) {}
+                }
+                return match;
+              }
+            );
+          }
+        } else if (node.type === "link") {
+          if (
+            node.destination &&
+            !node.destination.startsWith("#") &&
+            !node.destination.startsWith("http://") &&
+            !node.destination.startsWith("https://") &&
+            !node.destination.startsWith("//") &&
+            !node.destination.startsWith("mailto:") &&
+            !node.destination.startsWith("tel:")
+          ) {
+            try {
+              var resolved = new URL(node.destination, blobBase);
+              if (resolved.origin === new URL(blobBase).origin) {
+                node.destination = resolved.href;
+              }
+            } catch (e) {}
+          }
+        }
+      }
+    }
+    var result = writer.render(parsed);
+    readmeElement.innerHTML = result;
+  })();
+</script>
+</div>
+</div>
+<div class="file-preview" style="max-width: 100%;">
+  <h1>Live Document</h1>
+  <span style="display: flex; justify-content: center"
+  >Page: <span id="page_num"></span> / <span id="page_count"></span
+></span>
+
+<canvas
+  id="the-canvas"
+  style="
+    width: 85%;
+    max-width: 100%;
+    display: block;
+    margin: 1.5rem auto;
+    box-sizing: border-box;
+  "
+></canvas>
+
+<div class="navigation" style="display: none">
+  <button id="prev" type="button" style="visibility: hidden">Previous</button>
+  <button id="next" type="button" style="visibility: hidden">Next</button>
+</div>
+
+<script
+  src="https://unpkg.com/pdfjs-dist@5.4.530/build/pdf.min.mjs"
+  type="module"
+></script>
+
+<script type="module">
+  var url = "https://raw.githubusercontent.com/EvokeMadness/FreeCAD-sketcher-cheat-sheet/main/freeCAD-sketcher-constraints.pdf";
+
+  var { pdfjsLib } = globalThis;
+
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://unpkg.com/pdfjs-dist@5.4.530/build/pdf.worker.min.mjs";
+
+  var pdfDoc = null,
+    pageNum = 1,
+    pageRendering = false,
+    pageNumPending = null,
+    scale = 1,
+    canvas = document.getElementById("the-canvas"),
+    ctx = canvas.getContext("2d");
+
+  function renderPage(num) {
+    pageRendering = true;
+    pdfDoc.getPage(num).then(function (page) {
+      var viewport = page.getViewport({ scale: scale });
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+
+      var renderContext = {
+        canvasContext: ctx,
+        viewport: viewport,
+      };
+      var renderTask = page.render(renderContext);
+
+      renderTask.promise.then(function () {
+        pageRendering = false;
+        if (pageNumPending !== null) {
+          renderPage(pageNumPending);
+          pageNumPending = null;
+        }
+      });
+    });
+
+    document.getElementById("page_num").textContent = num;
+
+    var nav = document.querySelector(".navigation");
+    if (pdfDoc.numPages <= 1) {
+      if (nav) nav.style.display = "none";
+    } else {
+      if (nav) nav.style.display = "";
+      document.getElementById("prev").style.visibility =
+        num <= 1 ? "hidden" : "visible";
+      document.getElementById("next").style.visibility =
+        num >= pdfDoc.numPages ? "hidden" : "visible";
+    }
+  }
+
+  function queueRenderPage(num) {
+    if (pageRendering) {
+      pageNumPending = num;
+    } else {
+      renderPage(num);
+    }
+  }
+
+  function onPrevPage() {
+    if (pageNum <= 1) {
+      return;
+    }
+    pageNum--;
+    queueRenderPage(pageNum);
+  }
+  document.getElementById("prev").addEventListener("click", onPrevPage);
+
+  function onNextPage() {
+    if (pageNum >= pdfDoc.numPages) {
+      return;
+    }
+    pageNum++;
+    queueRenderPage(pageNum);
+  }
+  document.getElementById("next").addEventListener("click", onNextPage);
+
+  pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
+    pdfDoc = pdfDoc_;
+    document.getElementById("page_count").textContent = pdfDoc.numPages;
+
+    renderPage(pageNum);
+  });
+</script>
+
+</div>
+
+    </main>
+    <footer class="site-footer">
+  <p>© 2026 EvokeMadness</p>
+</footer>
+
+  </body>
+</html>

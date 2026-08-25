@@ -1,31 +1,50 @@
-h1 {
-  margin: 0;
-}
-
-h2 {
+body {
   display: flex;
-  justify-content: center;
-  margin-bottom: 0;
-  background-color: #1f1f1f99;
-  font-size: 2rem;
-  color: white;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: color-mix(in srgb, white 10%, #1f1f1f 90%);
+  background-image: url("/img/meizhi-lang-FkeX3sPH22g-unsplash.jpg");
 }
 
-code {
-  padding: 4px;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 0.9rem;
-  background-color: black;
-  border-radius: 0.3rem;
-  font-weight: bold;
-  color: green;
-  text-decoration: none;
+main {
+  flex: 1;
+  font-family: "Mona Sans VF", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Backtick Fix", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 a {
   text-decoration: none;
 }
 
+header {
+  border-bottom: 3px solid darkred;
+  background-color: #1f1f1f;
+
+  .header-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+
+    h1 {
+      margin: 1rem;
+      font-family: "Orbitron", Arial, Helvetica, sans-serif;
+      font-size: 2.75rem;
+    }
+
+    a {
+      margin-inline: 0.5rem;
+      color: white;
+    }
+
+    .fa-brands {
+      margin-block: 2rem;
+      font-size: 2.25rem;
+    }
+  }
+}
 
 .hero {
   display: flex;
@@ -33,8 +52,8 @@ a {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin: 0;
-  padding: 2rem;
+  margin-inline: 2rem;
+  margin-block: 2rem;
   color: white;
 
   img {
@@ -44,75 +63,73 @@ a {
     border: 2px solid darkred;
     border-radius: 100%;
   }
-}
 
-.biography {
-  padding: 1rem;
-  border: 2px solid darkred;
-  border-radius: 0.75rem;
-  background-color: #1f1f1f;
-  font-size: 1.125rem;
-}
-
-.description-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 240px;
-  padding: 1.5rem;
-  border: 1px solid black;
-  border-radius: 0.75rem;
-  background-color: #1f1f1f;
-  color: white;
+  .biography {
+    padding: 2rem;
+    border: 2px solid darkred;
+    border-radius: 0.75rem;
+    background-color: #1f1f1f;
+    font-size: 1.125rem;
+  }
 }
 
 .carousel {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: left;
   gap: 2rem;
-  margin-block: 0;
-  padding: 2rem;
   overflow-x: scroll;
+  margin-block: 0 2rem;
+  padding: 2rem;
   border-block: 2px solid darkred;
   background-color: #1f1f1f99;
   list-style: none;
 
-  a {
+  .description-left {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 150px;
+    padding: 1.5rem;
+    border: 1px solid black;
+    border-radius: 0.75rem;
+    background-color: #1f1f1f;
     color: white;
   }
 
-  li {
-    align-content: center;
+  a {
+    color: white;
   }
 
   img {
     max-height: 480px;
     border: 1px solid black;
     border-radius: 0.75rem;
-  }
 
-  img:hover {
-    scale: 110%;
+    &:hover {
+      scale: 110%;
+    }
   }
 
   .carousel-item {
     display: table;
-    margin: 0 auto;
-    margin-top: 1.625rem;
+    margin: 1.625rem auto 0;
     padding-inline: 1rem;
-    padding-block: 0.125rem;
     border: 1px solid black;
     border-radius: 8px;
     background-color: #1f1f1f;
   }
 }
 
-.README {
-  margin-top: 2rem;
-  padding: 2rem;
-  border: 2px solid darkred;
-  border-radius: 0.75rem;
+footer {
+  display: flex;
+  justify-content: center;
+  padding-block: 1rem;
+  border-top: 2px solid darkred;
   background-color: #1f1f1f;
+
+  p {
+    color: white;
+  }
 }
+
