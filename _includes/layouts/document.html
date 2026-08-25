@@ -4,13 +4,11 @@ layout: layouts/base.html
 <link rel="stylesheet" href="/css/overview.css" />
 <script src="https://unpkg.com/commonmark@0.29.3/dist/commonmark.js"></script>
 
-<div class="overview">
-  <div class="clearfix-container">
-    <div class="content">{{ content }}</div>
-    <div class="README">{% include "layouts/commonmark.html" %}</div>
-  </div>
-  <div class="file-preview">
-    <h2>Live Document</h2>
-    {% include "layouts/pdf.js.html" %}
-  </div>
+<div class="content-README">
+  <div class="content">{{ content }}</div>
+  <div class="README">{% include "layouts/commonmark.html" %}</div>
+</div>
+<div class="file-preview" style="max-width: 100%;">
+  <h1>Live Document</h1>
+  {% include "layouts/pdf.js.html" %}
 </div>

@@ -13,7 +13,7 @@
   "
 ></canvas>
 
-<div class="navigation">
+<div class="navigation" style="display: none">
   <button id="prev" type="button" style="visibility: hidden">Previous</button>
   <button id="next" type="button" style="visibility: hidden">Next</button>
 </div>
@@ -63,12 +63,11 @@
 
     document.getElementById("page_num").textContent = num;
 
+    var nav = document.querySelector(".navigation");
     if (pdfDoc.numPages <= 1) {
-      document.getElementById("prev").style.display = "none";
-      document.getElementById("next").style.display = "none";
+      if (nav) nav.style.display = "none";
     } else {
-      document.getElementById("prev").style.display = "";
-      document.getElementById("next").style.display = "";
+      if (nav) nav.style.display = "";
       document.getElementById("prev").style.visibility =
         num <= 1 ? "hidden" : "visible";
       document.getElementById("next").style.visibility =

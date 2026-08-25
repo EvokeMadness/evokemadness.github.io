@@ -1,69 +1,96 @@
 body {
-  background-image: url(/assets/carbon\ fiber_bump.png);
-  background-blend-mode: multiply;
+  background-image: url("/assets/carbon fiber_bump.png");
   background-size: 192px;
   background-repeat: repeat;
+  background-blend-mode: multiply;
 }
 
-.overview {
+main {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: center;
   align-items: flex-end;
   color: white;
 
-  img {
-    width: 100%;
-    max-width: 480px;
-    border-radius: 0.25rem;
+  .content-README {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2rem;
+    max-width: 1280px;
+    margin: 2rem;
+
+    .content {
+      display: none;
+      padding: 2rem;
+      border: 2px solid lightgrey;
+      border-radius: 0.75rem;
+      background-color: color-mix(in srgb, white 50%, #1f1f1f 50%);
+      font-size: 1.125rem;
+    }
+
+    .README {
+      padding: 2rem;
+      border: 2px solid darkred;
+      border-radius: 0.75rem;
+      background-color: #1f1f1f;
+      font-size: 16px;
+      line-height: 2.25;
+
+      code {
+        padding: .1em .4em;
+        border-radius: 6px;
+        background-color: black;
+        color: steelblue;
+        font-family: "Mona Sans VF", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Backtick Fix", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        text-decoration: none;
+      }
+
+      img {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 0.25rem;
+      }
+    }
   }
-}
 
-.clearfix-container {
-  max-width: 1280px;
-  display: flex;
-  flex-direction: column;
-  margin-inline: 2rem;
-  margin-bottom: 2rem;
-  flex: 1;
-}
-
-.content {
-  display: none;
-  margin-top: 2rem;
-  padding: 1rem;
-  border-radius: 0.75rem;
-  border: 2px solid lightgrey;
-  background-color: color-mix(in srgb, white 50%, #1f1f1f 100%);
-  font-size: 1.125rem;
-}
-
-.file-preview {
-  max-width: 480px;
-  margin-top: 2rem;
-  margin-inline: 2rem;
-  border: 2px solid darkred;
-  border-radius: 0.75rem;
-  background-color: #1f1f1f;
-  flex: 1;
-}
-
-.navigation {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  align-items: center;
-
-  button {
-    width: 5rem;
-    aspect-ratio: 1;
-    border-radius: 100%;
-    font-weight: bolder;
-    margin-bottom: 2rem;
-    color: gold;
+  .file-preview {
+    max-width: 480px;
+    margin-top: 2rem;
+    margin-inline: 2rem;
+    padding-bottom: 1.5rem;
+    border: 2px solid darkred;
+    border-radius: 0.75rem;
     background-color: #1f1f1f;
-    border-color: silver;
-    cursor: pointer;
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      line-height: 2.25;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      margin-block: -1.5rem;
+      padding-top: 1.5rem;
+
+      button {
+        width: 5rem;
+        aspect-ratio: 1;
+        margin-bottom: 1.5rem;
+        border-color: silver;
+        border-radius: 100%;
+        background-color: #1f1f1f;
+        color: gold;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+    }
   }
 }
 

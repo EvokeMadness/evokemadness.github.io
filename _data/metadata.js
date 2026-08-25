@@ -34,7 +34,7 @@ module.exports = {
   sections: [
     {
       tag: "models",
-      title: "CAD Projects",
+      title: "CAD",
       description: "3D model projects.",
       reversed: true,
     },
@@ -58,7 +58,7 @@ module.exports = {
     },
   ],
   author: {
-    name: "Allie Gonzales",
+    name: "Allison Gonzales",
     username: "EvokeMadness",
     email: "antgonzales9643@gmail.com",
     avatar: "assets/43455846.jpg",

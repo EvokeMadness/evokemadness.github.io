@@ -8,13 +8,11 @@ layout: layouts/base.html
 ></script>
 <script src="https://unpkg.com/commonmark@0.29.3/dist/commonmark.js"></script>
 
-<div class="overview">
-  <div class="clearfix-container">
-    <div class="content" style="display: none">{{ content }}</div>
-    <div class="README">{% include "layouts/commonmark.html" %}</div>
-  </div>
-  <div class="file-preview">
-    <h2>Model Preview</h2>
-    {% include "layouts/x3d.html" %}
-  </div>
+<div class="content-README">
+  <div class="content">{{ content }}</div>
+  <div class="README">{% include "layouts/commonmark.html" %}</div>
+</div>
+<div class="file-preview" style="width: 480px;">
+  <h1>Model Preview</h1>
+  {% include "layouts/x3d.html" %}
 </div>
