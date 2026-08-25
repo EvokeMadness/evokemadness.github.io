@@ -1,7 +1,5 @@
 ---
 layout: layouts/base.html
-eleventyComputed:
-  bodyStyle: "background-image: url({{ metadata.theme.heroBackground }})"
 ---
 <div class="hero">
   <img src="{{ metadata.author.avatar }}" alt="{{ metadata.author.name }} profile photo" />
@@ -44,6 +42,5 @@ eleventyComputed:
         {% endfor %}
       </ol>
     {% endif %}
-    <div style="height: 2rem"></div>
   {% endfor %}
 </div>

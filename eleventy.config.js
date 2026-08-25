@@ -1,8 +1,18 @@
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy("content");
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("favicon.svg");
-  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy({
+    "./public/": "/",
+  });
+  eleventyConfig.addPassthroughCopy({
+    "./content/projects/": "content/projects/",
+  });
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  return {
+    dir: {
+      input: "content",
+      includes: "../_includes",
+      data: "../_data",
+      output: "_site",
+    },
+  };
 };

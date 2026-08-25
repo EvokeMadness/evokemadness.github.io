@@ -4,9 +4,6 @@ module.exports = {
   language: "en",
   description:
     "I'm a maker and independent learner. I make content in several different mediums, because I am always excited to learn new skills and disciplines!",
-  theme: {
-    heroBackground: "/assets/meizhi-lang-FkeX3sPH22g-unsplash.jpg",
-  },
   skills: [
     "3D Modeling",
     "3D Printing",
@@ -61,7 +58,7 @@ module.exports = {
     name: "Allison Gonzales",
     username: "EvokeMadness",
     email: "antgonzales9643@gmail.com",
-    avatar: "assets/43455846.jpg",
+    avatar: "img/43455846.jpg",
 
     links: [
       {

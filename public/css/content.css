@@ -1,5 +1,5 @@
 body {
-  background-image: url("/assets/carbon fiber_bump.png");
+  background-image: url("/img/carbon fiber_bump.png");
   background-size: 192px;
   background-repeat: repeat;
   background-blend-mode: multiply;
@@ -56,8 +56,7 @@ main {
 
   .file-preview {
     max-width: 480px;
-    margin-top: 2rem;
-    margin-inline: 2rem;
+    margin: 2rem;
     padding-bottom: 1.5rem;
     border: 2px solid darkred;
     border-radius: 0.75rem;
@@ -97,10 +96,11 @@ main {
 .toast {
   display: flex;
   justify-content: center;
-  margin: 2rem;
-
+  align-items: center;
+  align-items: center;
+  margin: auto 2rem;
   h1 {
-    padding: 1rem;
+    padding: 2rem;
     border: 2px solid darkred;
     border-radius: 0.75rem;
     background-color: #1f1f1f;

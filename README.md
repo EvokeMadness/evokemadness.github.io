@@ -15,9 +15,6 @@ It features loading for models using [X3DOM](https://www.x3dom.org/), README fil
 		url: "",
 		language: "en",
 		description: "/* Bio */",
-		theme: {
-		  heroBackground: "/* Path to Hero Background Image */",
-		},
 		skills: [
 		  /* Array of Skills & SEO Tags */
 		],
@@ -42,9 +39,6 @@ It features loading for models using [X3DOM](https://www.x3dom.org/), README fil
 		  ],
 		},
 		```
-	- Dynamic SEO, Open Graph, Twitter Cards, and Schema.org JSON-LD metadata.
-	- Automated `sitemap.xml` generation and `robots.txt`.
-	- Extensible layout chaining and data-driven carousel sections.
 
 * * *
 
