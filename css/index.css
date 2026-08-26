@@ -29,9 +29,11 @@ header {
     color: white;
 
     h1 {
-      margin: 1rem;
+      margin-block: 2rem;
       font-family: "Orbitron", Arial, Helvetica, sans-serif;
-      font-size: 2.75rem;
+      font-size: clamp(1.4rem, 7vw, 2.75rem);
+      text-align: center;
+      white-space: nowrap;
     }
 
     a {
