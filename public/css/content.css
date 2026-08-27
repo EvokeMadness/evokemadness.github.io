@@ -97,13 +97,27 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-items: center;
   margin: auto 2rem;
+
   h1 {
     padding: 2rem;
     border: 2px solid darkred;
     border-radius: 0.75rem;
     background-color: #1f1f1f;
     color: white;
+  }
+}
+
+@media screen and (max-width: 42rem) {
+  main .content-README {
+    margin: 1rem;
+  }
+
+  main .file-preview {
+    margin: 1rem;
+  }
+
+  .toast {
+    margin: auto 1rem;
   }
 }

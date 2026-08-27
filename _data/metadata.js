@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Allie Gonzales | Portfolio",
+  title: "Allison Gonzales | Portfolio",
   url: "https://evokemadness.com/",
   language: "en",
   description:

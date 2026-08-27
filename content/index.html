@@ -3,9 +3,10 @@ layout: layouts/base.html
 ---
 <div class="hero">
   <img src="{{ metadata.author.avatar }}" alt="{{ metadata.author.name }} profile photo" />
-  <div class="biography">
-    <h1>{{ metadata.author.name }}</h1>
-    <p>{{ metadata.description }}</p>
+  <div class="profile">
+    <h1 class="name">{{ metadata.author.name }}</h1>
+    <p class="username">{{ metadata.author.username }}</p>
+    <p class="biography">{{ metadata.description }}</p>
   </div>
 </div>
 
