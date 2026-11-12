@@ -5,8 +5,8 @@ title: QCAD Cheat Sheets
 description: QCAD Cheat Sheet
 date: 2026-02-01
 project-url: https://github.com/EvokeMadness/QCAD-cheat-sheets
-cover: content/projects/documents/QCAD-cheat-sheets/preview-QCAD-cheat-sheets-modify.png
-file-preview: https://raw.githubusercontent.com/EvokeMadness/QCAD-cheat-sheets/main/QCAD-cheat-sheet-modify.pdf
+cover: content/projects/documents/QCAD-cheat-sheets/preview-QCAD-cheat-sheet.png
+file-preview: https://raw.githubusercontent.com/EvokeMadness/QCAD-cheat-sheets/main/QCAD-cheat-sheet.pdf
 display-readme-previews: true
 ---
 
