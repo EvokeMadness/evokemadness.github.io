@@ -1,5 +1,5 @@
 ---
-tags: note-cards
+tags: template
 layout: layouts/document.html
 title: Contrast and Accessibility Tool
 description: Contrast and Accessibility Tool
