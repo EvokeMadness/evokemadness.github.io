@@ -42,16 +42,16 @@ module.exports = {
       reversed: true,
     },
     {
-      tag: "note-cards",
-      title: "Note Cards",
-      description: "Printable quick reference material.",
-      reversed: false,
-    },
-    {
       tag: "software",
       title: "Software",
       description: "Software, plugins, scripts, and templates.",
       reversed: true,
+    },
+    {
+      tag: "note-cards",
+      title: "Note Cards",
+      description: "Printable quick reference material.",
+      reversed: false,
     },
   ],
   author: {
